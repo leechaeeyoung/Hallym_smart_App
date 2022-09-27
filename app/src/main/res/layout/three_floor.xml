@@ -30,13 +30,13 @@
         <!--A구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="245dp">
             <Button
                 android:id="@+id/F3A1"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="130dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,7 +44,6 @@
                 android:id="@+id/F3A2"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +52,6 @@
                 android:id="@+id/F3A3"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -62,7 +60,7 @@
                 android:id="@+id/F3A4"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
+
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -71,7 +69,7 @@
                 android:id="@+id/F3A5"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
+
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -80,7 +78,6 @@
                 android:id="@+id/F3A6"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -89,7 +86,6 @@
                 android:id="@+id/F3A7"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -98,7 +94,6 @@
                 android:id="@+id/F3A8"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -108,7 +103,6 @@
                 android:id="@+id/F3A9"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -117,7 +111,6 @@
                 android:id="@+id/F3A10"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -126,7 +119,6 @@
                 android:id="@+id/F3A11"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -135,7 +127,6 @@
                 android:id="@+id/F3A12"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -144,7 +135,6 @@
                 android:id="@+id/F3A13"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -153,7 +143,6 @@
                 android:id="@+id/F3A14"
                 android:layout_width="15dp"
                 android:layout_height="18dp"
-                android:layout_marginTop="235dp"
                 android:layout_marginStart="-6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -163,7 +152,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -172,7 +160,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -182,7 +169,6 @@
                 android:layout_width="14dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-4dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -191,7 +177,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -200,7 +185,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -209,7 +193,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -218,7 +201,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -227,7 +209,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -236,7 +217,6 @@
                 android:layout_width="15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -245,7 +225,6 @@
                 android:layout_width="14dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-6dp"
-                android:layout_marginTop="235dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -253,14 +232,15 @@
         <!--B구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="340dp">
+            <!--marginTop 삭제-->
 
             <Button
                 android:id="@+id/F3B1"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="132dp"
-                android:layout_marginTop="330dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -269,7 +249,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="330dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -278,7 +257,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="340dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -287,7 +266,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="340dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -296,7 +275,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="350dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -305,7 +284,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="350dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -314,7 +293,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="360dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -323,7 +302,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="360dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -331,13 +310,13 @@
         <!--C구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="390dp"
+            android:layout_marginStart="190dp">
             <Button
                 android:id="@+id/F3C1"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="380dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -346,7 +325,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="380dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -355,7 +333,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -364,7 +342,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -373,7 +351,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-2dp"
-                android:layout_marginTop="380dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -382,7 +359,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="380dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -391,7 +367,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -400,7 +376,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -409,7 +385,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-2dp"
-                android:layout_marginTop="380dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -418,7 +393,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="380dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -427,7 +401,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -436,7 +410,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -447,7 +421,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-72dp"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -456,7 +430,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -465,7 +439,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="410dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -474,7 +448,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="410dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -483,7 +457,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-2dp"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -492,7 +466,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -500,8 +474,8 @@
                 android:id="@+id/F3C19"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-24dp"
-                android:layout_marginTop="410dp"
+                android:layout_marginStart="-25dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -510,7 +484,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="410dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -518,8 +492,8 @@
                 android:id="@+id/F3C21"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-4dp"
-                android:layout_marginTop="400dp"
+                android:layout_marginStart="-2dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -528,7 +502,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -536,8 +510,8 @@
                 android:id="@+id/F3C23"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-24dp"
-                android:layout_marginTop="410dp"
+                android:layout_marginStart="-25dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -546,7 +520,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="410dp"
+                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -557,7 +531,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-73dp"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -566,7 +540,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -575,7 +549,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="430dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -584,7 +558,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="430dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -593,7 +567,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-2dp"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -602,7 +576,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -610,8 +584,8 @@
                 android:id="@+id/F3C31"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-24dp"
-                android:layout_marginTop="430dp"
+                android:layout_marginStart="-25dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -620,7 +594,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="430dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -629,7 +603,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-2dp"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -638,7 +612,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -646,8 +620,8 @@
                 android:id="@+id/F3C35"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-24dp"
-                android:layout_marginTop="430dp"
+                android:layout_marginStart="-25dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -656,7 +630,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="430dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -666,8 +640,8 @@
                 android:id="@+id/F3C37"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-75dp"
-                android:layout_marginTop="440dp"
+                android:layout_marginStart="-73dp"
+                android:layout_marginTop="60dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -676,7 +650,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
+                android:layout_marginTop="60dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -685,7 +659,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="70dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -694,7 +668,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="70dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -703,7 +677,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-2dp"
-                android:layout_marginTop="440dp"
+                android:layout_marginTop="60dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -712,7 +686,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
+                android:layout_marginTop="60dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -720,8 +694,8 @@
                 android:id="@+id/F3C43"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-24dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginStart="-25dp"
+                android:layout_marginTop="70dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -730,7 +704,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="70dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -739,7 +713,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-2dp"
-                android:layout_marginTop="440dp"
+                android:layout_marginTop="60dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -748,7 +722,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
+                android:layout_marginTop="60dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -756,8 +730,8 @@
                 android:id="@+id/F3C47"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-24dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginStart="-25dp"
+                android:layout_marginTop="70dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -766,7 +740,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="70dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -774,14 +748,14 @@
         <!--D구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="405dp">
             <!--첫 번째 테이블-->
             <Button
                 android:id="@+id/F3D1"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="100dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -790,7 +764,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -799,7 +772,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -808,7 +781,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -818,7 +791,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="6dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -827,7 +799,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -836,7 +807,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -845,17 +816,16 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!--세 번쨰 테이블-->
+            <!--세 번째 테이블-->
             <Button
                 android:id="@+id/F3D9"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="6dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -864,7 +834,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -873,7 +842,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -882,7 +851,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -890,14 +859,14 @@
         <!--E구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="455dp">
             <!--첫 번째 테이블-->
             <Button
                 android:id="@+id/F3E1"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="77dp"
-                android:layout_marginTop="440dp"
+                android:layout_marginStart="76dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -906,7 +875,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -915,7 +883,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -924,7 +892,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -934,7 +902,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -943,7 +910,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -952,7 +918,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -961,7 +927,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -971,7 +937,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -980,7 +945,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -989,7 +953,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -998,17 +962,16 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!--네 번쨰 테이블-->
+            <!--네 번째 테이블-->
             <Button
                 android:id="@+id/F3E13"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1017,7 +980,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1026,7 +988,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1035,17 +997,16 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!--다섯 번쨰 테이블-->
+            <!--다섯 번째 테이블-->
             <Button
                 android:id="@+id/F3E17"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1054,7 +1015,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="440dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1063,7 +1023,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1072,7 +1032,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -1080,14 +1040,14 @@
         <!--F구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="480dp">
             <!--첫 번째 테이블-->
             <Button
                 android:id="@+id/F3F1"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="80dp"
-                android:layout_marginTop="470dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1095,8 +1055,7 @@
                 android:id="@+id/F3F2"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-7dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1104,8 +1063,8 @@
                 android:id="@+id/F3F3"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-25dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-24dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1113,8 +1072,8 @@
                 android:id="@+id/F3F4"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-7dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1123,8 +1082,7 @@
                 android:id="@+id/F3F5"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-7dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1132,8 +1090,7 @@
                 android:id="@+id/F3F6"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-7dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1141,8 +1098,8 @@
                 android:id="@+id/F3F7"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-25dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-24dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1150,8 +1107,8 @@
                 android:id="@+id/F3F8"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-7dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1160,8 +1117,7 @@
                 android:id="@+id/F3F9"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-7dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1169,8 +1125,7 @@
                 android:id="@+id/F3F10"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-7dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1178,8 +1133,8 @@
                 android:id="@+id/F3F11"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-25dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-24dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1187,8 +1142,8 @@
                 android:id="@+id/F3F12"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-7dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1197,8 +1152,7 @@
                 android:id="@+id/F3F13"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-7dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1206,8 +1160,7 @@
                 android:id="@+id/F3F14"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-7dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1215,8 +1168,8 @@
                 android:id="@+id/F3F15"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-25dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-24dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1224,8 +1177,8 @@
                 android:id="@+id/F3F16"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-7dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1234,8 +1187,7 @@
                 android:id="@+id/F3F17"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-7dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1243,8 +1195,7 @@
                 android:id="@+id/F3F18"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="470dp"
+                android:layout_marginStart="-7dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1252,8 +1203,8 @@
                 android:id="@+id/F3F19"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-25dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-24dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1261,8 +1212,8 @@
                 android:id="@+id/F3F20"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="-5dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginStart="-7dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -1270,14 +1221,14 @@
         <!--G구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="575dp">
             <!--첫 번째 테이블-->
             <Button
                 android:id="@+id/F3G1"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="135dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1286,7 +1237,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1295,7 +1245,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1304,7 +1254,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1314,7 +1264,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1323,7 +1272,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1332,7 +1280,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1341,7 +1289,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1351,7 +1299,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1360,7 +1307,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1369,7 +1315,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1378,7 +1324,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1388,7 +1334,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1397,7 +1342,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1406,7 +1350,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1415,7 +1359,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1425,7 +1369,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1434,7 +1377,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1443,7 +1385,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1452,7 +1394,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1462,7 +1404,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1471,7 +1412,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1480,7 +1420,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1489,7 +1429,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1499,7 +1439,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1508,7 +1447,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1517,7 +1455,7 @@
                 android:layout_width= "14dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1526,7 +1464,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1536,7 +1474,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1545,7 +1482,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1554,7 +1490,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1563,7 +1499,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1573,7 +1509,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1582,7 +1517,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1591,7 +1525,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-24dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1600,7 +1534,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1610,7 +1544,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1619,7 +1552,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="565dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1628,7 +1560,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1637,7 +1569,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -1645,14 +1577,14 @@
         <!--H구역 좌석-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="390dp">
             <!--첫 번째 테이블-->
             <Button
                 android:id="@+id/F3H1"
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1661,7 +1593,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1670,7 +1601,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1679,7 +1610,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1689,7 +1620,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1698,7 +1628,6 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="395dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1707,7 +1636,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-25dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -1716,7 +1645,7 @@
                 android:layout_width= "15dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="-5dp"
-                android:layout_marginTop="405dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

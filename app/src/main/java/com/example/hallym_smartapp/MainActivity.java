@@ -8,10 +8,10 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.hallym_smartapp.Reservation.Fragment1;
-import com.example.hallym_smartapp.Reservation.Fragment2;
-import com.example.hallym_smartapp.Reservation.Fragment3;
-import com.example.hallym_smartapp.Reservation.Fragment4;
+import com.example.hallym_smartapp.Reservation.mainPage.Fragment1;
+import com.example.hallym_smartapp.Reservation.mainPage.Fragment2;
+import com.example.hallym_smartapp.Reservation.mainPage.Fragment3;
+import com.example.hallym_smartapp.Reservation.mainPage.Fragment4;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     // 층수마다 플래그

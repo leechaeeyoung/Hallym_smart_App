@@ -1,4 +1,4 @@
-package com.example.hallym_smartapp.Reservation;
+package com.example.hallym_smartapp.Reservation.Flag;
 
 
 import static com.example.hallym_smartapp.R.*;

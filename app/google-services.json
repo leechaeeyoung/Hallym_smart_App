@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "537891614299",
+    "project_id": "hallym-smartapp",
+    "storage_bucket": "hallym-smartapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537891614299:android:005dc743e7d0bf8f39197e",
+        "android_client_info": {
+          "package_name": "com.example.hallym_smartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537891614299-9m4ije8lbmm0cesmg4fdd8i9tf7ftua9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbnCafkj3BGKRsv6t15Vbwbgs5w0bdF58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537891614299-9m4ije8lbmm0cesmg4fdd8i9tf7ftua9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

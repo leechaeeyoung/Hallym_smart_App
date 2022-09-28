@@ -16,4 +16,7 @@ import com.example.hallym_smartapp.R;
 public class Fragment1 extends Fragment {
     public Fragment1(){
     }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedI){
+        return inflater.inflate(R.layout.two_floor, container,false);
+    }
 }

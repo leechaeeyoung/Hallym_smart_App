@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "537891614299",
+    "firebase_url": "https://hallym-smartapp-default-rtdb.firebaseio.com",
     "project_id": "hallym-smartapp",
     "storage_bucket": "hallym-smartapp.appspot.com"
   },

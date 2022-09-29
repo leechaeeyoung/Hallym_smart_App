@@ -8,12 +8,21 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.hallym_smartapp.Reservation.Flag.Fragment1;
 import com.example.hallym_smartapp.Reservation.Flag.Fragment2;
 import com.example.hallym_smartapp.Reservation.Flag.Fragment3;
 import com.example.hallym_smartapp.Reservation.Flag.Fragment4;
+import com.example.hallym_smartapp.Reservation.Function.SeatCnt;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+
+
     // 층수마다 플래그
     private final int FRAGMENT1=1;
     private final int FRAGMENT2=2;
@@ -41,6 +50,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_tab4.setOnClickListener(this);
     }
 
+    // DB 좌석 정보
+    public void seatDBSet(){
+        SeatCnt seatCnt = new SeatCnt(Integer.toString(100));
+        Map<String, Object> postValues = seatCnt.map();
+        Map<String,Object> childUpdates = new HashMap<>();
+        childUpdates.put("/seat_count/"+"nowSeatCount",postValues);
+        databaseReference.updateChildren(childUpdates);
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -66,12 +84,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         switch (fragment_no){
-            case 1:
-                // 프래그 1 호출
-                Fragment1 frag1 = new Fragment1();
-                transaction.replace(R.id.fragment_container, frag1);
-                transaction.commit();
-                break;
             case 2:
                 Fragment2 frag2 = new Fragment2();
                 transaction.replace(R.id.fragment_container, frag2);

@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2층 좌석" />
+                    android:text="내 좌석" />
 
                 <Button
                     android:id="@+id/bt_tab2"

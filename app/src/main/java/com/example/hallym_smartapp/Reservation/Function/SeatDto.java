@@ -1,4 +1,4 @@
-package com.example.hallym_smartapp.Reservation;
+package com.example.hallym_smartapp.Reservation.Function;
 
 import androidx.room.Ignore;
 
@@ -8,22 +8,23 @@ import com.google.firebase.database.IgnoreExtraProperties;
 import java.util.HashMap;
 import java.util.Map;
 
+// 데이터 교환
 @IgnoreExtraProperties
 public class SeatDto {
     private int seatNum;
     private String userId = "";
     private boolean seatState = false;
-    private String remainTime = "";
+    private String endTime = "";
 
     public SeatDto(int seatNum) {
         this.seatNum = seatNum;
     }
 
-    public SeatDto(int seatNum, String userId, boolean seatState, String remainTime) {
+    public SeatDto(int seatNum, String userId, boolean seatState, String endTime) {
         this.seatNum = seatNum;
         this.userId = userId;
         this.seatState = seatState;
-        this.remainTime = remainTime;
+        this.endTime = endTime;
     }
 
     public int getSeatNum() {
@@ -50,12 +51,12 @@ public class SeatDto {
         this.seatState = seatState;
     }
 
-    public String getRemainTime() {
-        return remainTime;
+    public String getEndTime() {
+        return endTime;
     }
 
-    public void setRemainTime(String remainTime) {
-        this.remainTime = remainTime;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
     public SeatDto() {
@@ -66,7 +67,7 @@ public class SeatDto {
         result.put("seatNum",seatNum);
         result.put("userId",userId);
         result.put("seatState",seatState);
-        result.put("remainTime",remainTime);
+        result.put("remainTime",endTime);
         return result;
     }
 }

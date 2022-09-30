@@ -39,13 +39,11 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_main);
 
         // tab키 참조
-        bt_tab1=(Button)findViewById(R.id.bt_tab1);
         bt_tab2=(Button)findViewById(R.id.bt_tab2);
         bt_tab3=(Button)findViewById(R.id.bt_tab3);
         bt_tab4=(Button)findViewById(R.id.bt_tab4);
 
         // 버튼 누를 때 리스너 연결
-        bt_tab1.setOnClickListener(this);
         bt_tab2.setOnClickListener(this);
         bt_tab3.setOnClickListener(this);
         bt_tab4.setOnClickListener(this);
@@ -64,10 +62,6 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.bt_tab1:
-                // 2층 버튼 클릭 시 프래그 1 호출
-                callFragment(FRAGMENT1);
-                break;
             case R.id.bt_tab2:
                 // 3층 버튼 클릭 시 프래그 2 호출
                 callFragment(FRAGMENT2);

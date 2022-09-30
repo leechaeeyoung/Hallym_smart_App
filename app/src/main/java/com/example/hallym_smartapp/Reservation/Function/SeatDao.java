@@ -9,6 +9,7 @@ import java.util.Map;
 // DB접속 데이터 CRUD작업
 public class SeatDao {
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    // 데이터 읽기 위한 객체생성
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
     // 좌석 정보 업데이트

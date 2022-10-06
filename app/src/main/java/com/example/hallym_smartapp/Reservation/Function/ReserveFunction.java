@@ -11,6 +11,7 @@ import androidx.room.Query;
 
 import com.example.hallym_smartapp.R;
 
+// 좌석 예약, 반납, 연장 기능
 public class ReserveFunction extends Activity {
     public static Context tableContext;
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,4 @@ public class ReserveFunction extends Activity {
         setContentView(R.layout.reservation_main);
         setTitle("한림대학교 도서관 좌석 예약하기");
     }
-//    public void nowSeat(){
-//        Query query = databaseReference.child("seat_cnt").child("nowSeatCnt");
-//    }
 }

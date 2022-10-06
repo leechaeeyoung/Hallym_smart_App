@@ -25,7 +25,6 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
 
 
     // 층수마다 플래그
-    private final int FRAGMENT1=1;
     private final int FRAGMENT2=2;
     private final int FRAGMENT3=3;
     private final int FRAGMENT4=4;

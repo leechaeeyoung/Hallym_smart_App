@@ -48,16 +48,6 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         bt_tab4.setOnClickListener(this);
     }
 
-    // DB 좌석 정보
-    public void seatDBSet(){
-        SeatCnt seatCnt = new SeatCnt(Integer.toString(100));
-        Map<String, Object> postValues = seatCnt.map();
-        Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/seat_count/"+"nowSeatCount",postValues);
-        databaseReference.updateChildren(childUpdates);
-    }
-
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -97,4 +87,13 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
                 break;
         }
     }
+    // DB 좌석 정보
+    public void seatDBSet(){
+        SeatCnt seatCnt = new SeatCnt(Integer.toString(100));
+        Map<String, Object> postValues = seatCnt.map();
+        Map<String,Object> childUpdates = new HashMap<>();
+        childUpdates.put("/seat_count/"+"nowSeatCount",postValues);
+        databaseReference.updateChildren(childUpdates);
+    }
+
 }

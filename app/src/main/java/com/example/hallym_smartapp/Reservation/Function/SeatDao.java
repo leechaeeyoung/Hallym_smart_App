@@ -1,5 +1,7 @@
 package com.example.hallym_smartapp.Reservation.Function;
 
+import static com.example.hallym_smartapp.Login.LoginActivity.loginId;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

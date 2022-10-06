@@ -19,4 +19,5 @@ public class ReserveFunction extends Activity {
         setContentView(R.layout.reservation_main);
         setTitle("한림대학교 도서관 좌석 예약하기");
     }
+
 }

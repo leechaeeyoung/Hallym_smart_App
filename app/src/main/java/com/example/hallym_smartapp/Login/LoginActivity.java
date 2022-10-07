@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 String pwd = passwordText.getText().toString();
 
                 if (id.equals("") || pwd.equals(""))
-                    Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
+                    Tdoast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
                 else
                     loginCheck(id, pwd);
             }
@@ -48,13 +48,15 @@ public class LoginActivity extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.hasChild(id))
                         if(snapshot.child(id).child("pwd").getValue().equals(pwd)){
-                            Log.e("login")
-                        }
+                            Log.e("loginCheck: ", "로그인 되었습니다.");
+                        } else{
+                            Log.e("loginCheck: ","아이디가 존재하지 않습니다.");
+                    }
                 }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-
+                    Log.e("loadUser:onCancelled", String.valueOf(error.toException()));
                 }
             });
         }

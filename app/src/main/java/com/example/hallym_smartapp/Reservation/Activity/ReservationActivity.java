@@ -92,7 +92,7 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         SeatCnt seatCnt = new SeatCnt(Integer.toString(100));
         Map<String, Object> postValues = seatCnt.map();
         Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/seat_count/"+"nowSeatCount",postValues);
+        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
         databaseReference.updateChildren(childUpdates);
     }
 

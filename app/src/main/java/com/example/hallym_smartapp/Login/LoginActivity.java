@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 String pwd = passwordText.getText().toString();
 
                 if (id.equals("") || pwd.equals(""))
-                    Tdoast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
                 else
                     loginCheck(id, pwd);
             }

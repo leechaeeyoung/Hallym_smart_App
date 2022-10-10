@@ -13,11 +13,29 @@
         android:layout_gravity="center"
         android:src="@drawable/logo_mark"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/idText"
+            android:id="@+id/newName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="이름" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newId"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="학번" />
@@ -28,30 +46,39 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordText"
+            android:id="@+id/newPwd"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="비밀번호" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginBt"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="#0066B3"
-        android:textColor="#FFFFFF"
-        android:text="로그인"
-        android:textSize="16dp"/>
+        android:layout_height="wrap_content"
+        android:text="※ 특수문자 포함 7글자 이상으로 설정"
+        android:gravity="right"
+        android:textColor="#A9A9A9"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newPwdCheck"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="비밀번호 확인" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/signBt"
+        android:id="@+id/newSignBt"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="#00B6AD"
+        android:text="확인"
         android:textColor="#FFFFFF"
-        android:text="회원가입"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        tools:ignore="TextContrastCheck" />
 
 </LinearLayout>

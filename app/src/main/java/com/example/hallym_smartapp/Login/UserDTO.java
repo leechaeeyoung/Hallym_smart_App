@@ -15,7 +15,7 @@ public class UserDTO{
     private int seatNum;
     private String reservationDate="";
     private String remainTime="";
-    private boolean myreservationState=false;
+    private boolean seatState=false;
 
     public UserDTO(){}
 
@@ -46,6 +46,15 @@ public class UserDTO{
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getSeatNum() {
+        return seatNum;
+    }
+
+    public void setSeatNum(int seatNum) {
+        this.seatNum = seatNum;
+    }
+
     public int getFloorNum() {
         return floorNum;
     }
@@ -70,12 +79,12 @@ public class UserDTO{
         this.remainTime = remainTime;
     }
 
-    public boolean isMyreservationState() {
-        return myreservationState;
+    public boolean isSeatState() {
+        return seatState;
     }
 
-    public void setMyreservationState(boolean myreservationState) {
-        this.myreservationState = myreservationState;
+    public void setSeatState(boolean seatState) {
+        this.seatState = seatState;
     }
 
     // DB에 User 데이터 삽입
@@ -85,11 +94,12 @@ public class UserDTO{
 
         result.put("id",id);
         result.put("pwd",pwd);
+        result.put("name",name);
         result.put("floorNum",floorNum);
         result.put("seatNum",seatNum);
         result.put("reservationDate",reservationDate);
         result.put("remainTime",remainTime);
-        result.put("myreservationState",myreservationState);
+        result.put("seatState",seatState);
 
         return result;
     }

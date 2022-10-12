@@ -14,17 +14,17 @@ public class SeatDto {
     private int seatNum;
     private String userId = "";
     private boolean seatState = false;
-    private String endTime = "";
+    private String remainTime = "";
 
     public SeatDto(int seatNum) {
         this.seatNum = seatNum;
     }
 
-    public SeatDto(int seatNum, String userId, boolean seatState, String endTime) {
+    public SeatDto(int seatNum, String userId, boolean seatState, String remainTime) {
         this.seatNum = seatNum;
         this.userId = userId;
         this.seatState = seatState;
-        this.endTime = endTime;
+        this.remainTime = remainTime;
     }
 
     public int getSeatNum() {
@@ -51,12 +51,12 @@ public class SeatDto {
         this.seatState = seatState;
     }
 
-    public String getEndTime() {
-        return endTime;
+    public String getRemainTime() {
+        return remainTime;
     }
 
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
+    public void setRemainTime(String endTime) {
+        this.remainTime = remainTime;
     }
 
     public SeatDto() {
@@ -67,7 +67,7 @@ public class SeatDto {
         result.put("seatNum",seatNum);
         result.put("userId",userId);
         result.put("seatState",seatState);
-        result.put("remainTime",endTime);
+        result.put("remainTime",remainTime);
         return result;
     }
 }

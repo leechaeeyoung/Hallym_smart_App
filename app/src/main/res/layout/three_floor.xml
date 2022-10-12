@@ -21,7 +21,7 @@
         android:layout_weight="1"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/Floor3" />
+        app:srcCompat="@drawable/floor3" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

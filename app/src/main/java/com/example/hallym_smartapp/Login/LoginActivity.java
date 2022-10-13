@@ -9,9 +9,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallym_smartapp.MainActivity;
+import com.example.hallym_smartapp.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,41 +21,45 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.BreakIterator;
 
 public class LoginActivity extends AppCompatActivity {
     EditText idText, passwordText;
     Button loginBt,signBt;
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference databaseReference = firebaseDatabase.getReference();
-
     Intent intent;
+
+    private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private final DatabaseReference databaseReference = firebaseDatabase.getReference();
+
     public static boolean loginStatus = false; // 기본으로 로그인 상태가 아님으로 표시
     public static String loginId="";
+    public static UserDTO userDTO;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+        idText = findViewById(R.id.idText);
+        passwordText = findViewById(R.id.passwordText);
+        loginBt = findViewById(R.id.loginBt);
+        signBt = findViewById(R.id.signBt);
 
         // 회원가입 버튼 클릭 이밴트
-        signBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(getApplicationContext(),SignUp.class);
-                startActivity(intent);
-            }
+        signBt.setOnClickListener(v -> {
+            intent = new Intent(getApplicationContext(), SignUp.class);
+            startActivity(intent);
         });
 
         // 로그인 버튼 클릭이벤트
-        loginBt.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String id = idText.getText().toString();
-                String pwd = passwordText.getText().toString();
+        loginBt.setOnClickListener(v -> {
+            String id = idText.getText().toString();
+            String pwd = passwordText.getText().toString();
 
-                if (id.equals("") || pwd.equals(""))
-                    Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
-                else
-                    loginCheck(id, pwd);
-            }
+            if (id.equals("") || pwd.equals(""))
+                Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
+            else
+                loginCheck(id, pwd);
         });
     }
         // 등록된 유저인지 확인

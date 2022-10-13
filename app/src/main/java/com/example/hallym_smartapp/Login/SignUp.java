@@ -3,11 +3,8 @@ package com.example.hallym_smartapp.Login;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallym_smartapp.R;
@@ -19,35 +16,31 @@ import java.util.Map;
 
 public class SignUp extends AppCompatActivity {
     Button signBt;
-    Intent intent;
     EditText newName, newPwd, newId;
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private final DatabaseReference databaseReference = firebaseDatabase.getReference();
 
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.signup_layout);
 
         setTitle("회원가입");
 
-        newId = (EditText)findViewById(R.id.newId);
-        newName = (EditText)findViewById(R.id.newName);
-        newPwd = (EditText)findViewById(R.id.newPwd);
+        newId = findViewById(R.id.newId);
+        newName = findViewById(R.id.newName);
+        newPwd = findViewById(R.id.newPwd);
         signBt = findViewById(R.id.signBt);
 
         // 회원가입 버튼 클릭 이벤트
-        signBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String id = newId.getText().toString();
-                String pwd = newPwd.getText().toString();
-                String name = newName.getText().toString();
-                UserDTO userDTO = new UserDTO(id, pwd, name);
-                signUp(id,pwd,name);
-                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
-                startActivity(intent);
-            }
+        signBt.setOnClickListener(v -> {
+            String id = newId.getText().toString();
+            String pwd = newPwd.getText().toString();
+            String name = newName.getText().toString();
+            UserDTO userDTO = new UserDTO(id, pwd, name);
+            signUp(id, pwd, name);
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
         });
     }
         // 회원가입

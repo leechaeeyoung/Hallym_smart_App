@@ -1,0 +1,716 @@
+{
+  "fiveFloor": {
+    "name": "Five Floor",
+    "totalRow": 21,
+    "totalColumn": 21,
+    "rows": [
+      {
+        "rowName": "A",
+        "rowIndex": 0,
+        "seats": [
+          {
+            "columnIndex": "1",
+            "rowIndex": "0",
+            "name": "A-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "2",
+            "rowIndex": "0",
+            "name": "A-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "3",
+            "rowIndex": "0",
+            "name": "A-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "4",
+            "rowIndex": "0",
+            "name": "A-4",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "5",
+            "rowIndex": "0",
+            "name": "A-5",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "6",
+            "rowIndex": "0",
+            "name": "A-6",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "7",
+            "rowIndex": "0",
+            "name": "A-7",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "8",
+            "rowIndex": "0",
+            "name": "A-8",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "9",
+            "rowIndex": "0",
+            "name": "A-9",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "0",
+            "name": "A-10",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "0",
+            "name": "A-11",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "13",
+            "rowIndex": "0",
+            "name": "A-12",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "B",
+        "rowIndex": 1,
+        "seats": [
+          {
+            "columnIndex": "1",
+            "rowIndex": "1",
+            "name": "B-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "2",
+            "rowIndex": "1",
+            "name": "B-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "3",
+            "rowIndex": "1",
+            "name": "B-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "4",
+            "rowIndex": "1",
+            "name": "B-4",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "5",
+            "rowIndex": "1",
+            "name": "B-5",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "6",
+            "rowIndex": "1",
+            "name": "B-6",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "7",
+            "rowIndex": "1",
+            "name": "B-7",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "8",
+            "rowIndex": "1",
+            "name": "B-8",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "9",
+            "rowIndex": "1",
+            "name": "B-9",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "1",
+            "name": "B-10",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "C",
+        "rowIndex": 2,
+        "seats": [
+          {
+            "columnIndex": "1",
+            "rowIndex": "2",
+            "name": "C-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "2",
+            "rowIndex": "2",
+            "name": "C-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "3",
+            "rowIndex": "2",
+            "name": "C-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "4",
+            "rowIndex": "2",
+            "name": "C-4",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "5",
+            "rowIndex": "2",
+            "name": "C-5",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "6",
+            "rowIndex": "2",
+            "name": "C-6",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "7",
+            "rowIndex": "2",
+            "name": "C-7",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "8",
+            "rowIndex": "2",
+            "name": "C-8",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "9",
+            "rowIndex": "2",
+            "name": "C-9",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "2",
+            "name": "C-10",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "D",
+        "rowIndex": 9,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "9",
+            "name": "D-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "9",
+            "name": "D-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "9",
+            "name": "D-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "9",
+            "name": "D-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "E",
+        "rowIndex": 10,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "10",
+            "name": "E-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "10",
+            "name": "E-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "10",
+            "name": "E-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "10",
+            "name": "E-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "F",
+        "rowIndex": 11,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "11",
+            "name": "F-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "11",
+            "name": "F-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "11",
+            "name": "F-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "11",
+            "name": "F-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "G",
+        "rowIndex": 12,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "12",
+            "name": "G-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "12",
+            "name": "G-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "12",
+            "name": "G-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "12",
+            "name": "G-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "H",
+        "rowIndex": 13,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "13",
+            "name": "H-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "13",
+            "name": "H-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "13",
+            "name": "H-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "13",
+            "name": "H-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "I",
+        "rowIndex": 14,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "14",
+            "name": "I-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "14",
+            "name": "I-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "14",
+            "name": "I-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "14",
+            "name": "I-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "J",
+        "rowIndex": 15,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "15",
+            "name": "J-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "15",
+            "name": "J-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "15",
+            "name": "J-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "15",
+            "name": "J-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "K",
+        "rowIndex": 16,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "16",
+            "name": "K-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "16",
+            "name": "K-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "16",
+            "name": "K-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "16",
+            "name": "K-4",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "L",
+        "rowIndex": 17,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "17",
+            "name": "L-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "17",
+            "name": "L-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "17",
+            "name": "L-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "17",
+            "name": "L-4",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "13",
+            "rowIndex": "17",
+            "name": "L-5",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "14",
+            "rowIndex": "17",
+            "name": "L-6",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "M",
+        "rowIndex": 18,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "18",
+            "name": "M-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "18",
+            "name": "M-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "18",
+            "name": "M-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "18",
+            "name": "M-4",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "13",
+            "rowIndex": "18",
+            "name": "M-5",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "14",
+            "rowIndex": "18",
+            "name": "M-6",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "O",
+        "rowIndex": 19,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "19",
+            "name": "O-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "19",
+            "name": "O-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "19",
+            "name": "O-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "19",
+            "name": "O-4",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "13",
+            "rowIndex": "19",
+            "name": "O-5",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "14",
+            "rowIndex": "19",
+            "name": "O-6",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "rowName": "P",
+        "rowIndex": 20,
+        "seats": [
+          {
+            "columnIndex": "9",
+            "rowIndex": "20",
+            "name": "P-1",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "10",
+            "rowIndex": "20",
+            "name": "P-2",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "11",
+            "rowIndex": "20",
+            "name": "P-3",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "12",
+            "rowIndex": "20",
+            "name": "P-4",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "13",
+            "rowIndex": "20",
+            "name": "P-5",
+            "type": "available",
+            "isSelected": false
+          },
+          {
+            "columnIndex": "14",
+            "rowIndex": "20",
+            "name": "P-6",
+            "type": "available",
+            "isSelected": false
+          }
+        ]
+      }
+    ]
+  }
+}
+

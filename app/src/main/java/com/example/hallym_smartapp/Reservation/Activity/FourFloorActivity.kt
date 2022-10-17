@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.hallym_smartapp.R
 import com.murgupluoglu.seatview.Seat
 import com.murgupluoglu.seatview.SeatViewListener
-import com.murgupluoglu.seatview.extensions.CinemaScreenExtension
-import kotlinx.android.synthetic.main.five_floor.*
+import kotlinx.android.synthetic.main.four_floor.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.*
@@ -16,13 +15,10 @@ import java.util.*
 *  Copyright © 2020 Mustafa Ürgüplüoğlu. All rights reserved.
 */
 
-class FiveFloorActivity : AppCompatActivity() {
+class FourFloorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.five_floor)
-
-        //seatView.extensions.add(DebugExtension()) 보조선
-        //seatView.extensions.add(CinemaScreenExtension())
+        setContentView(R.layout.four_floor)
 
 
         seatView.seatViewListener = object : SeatViewListener {
@@ -49,10 +45,10 @@ class FiveFloorActivity : AppCompatActivity() {
         val rowNames : HashMap<String, String> = HashMap()
 
         val fiveSeat = JSONObject(loadJSONFromAsset()) //메소드 호출
-        val rowCount = fiveSeat.getJSONObject("Five Floor").getInt("totalRow")
-        val columnCount = fiveSeat.getJSONObject("Five Floor").getInt("totalColumn")
+        val rowCount = fiveSeat.getJSONObject("Four Floor").getInt("totalRow")
+        val columnCount = fiveSeat.getJSONObject("Four Floor").getInt("totalColumn")
         val seatArray = Array(rowCount) { Array(columnCount) { Seat() } }
-        val rowArray = fiveSeat.getJSONObject("Five Floor").getJSONArray("rows")
+        val rowArray = fiveSeat.getJSONObject("Four Floor").getJSONArray("rows")
 
         seatView.initSeatView(
             loadSeat(seatArray, rowNames, rowArray, rowCount, columnCount),
@@ -132,7 +128,7 @@ class FiveFloorActivity : AppCompatActivity() {
     }
 
     private fun loadJSONFromAsset(): String {
-        val fileName = "fiveFloor.json"
+        val fileName = "fourFloor.json"
         val jsonString = assets.open(fileName).bufferedReader().use {
             it.readText()
         }

@@ -15,6 +15,10 @@
         tools:ignore="ExtraText">
         <activity android:name=".Splash" android:theme="@android:style/Theme.NoTitleBar" />
         <activity android:name=".Reservation.Activity.FiveFloorActivity"/>
+        <activity android:name=".Reservation.Activity.FourFloorActivity"/>
+        <activity android:name=".Reservation.Activity.ThirdFloorActivity"/>
+        <activity android:name=".Login.LoginActivity"/>
+        <activity android:name=".Login.SignUp"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

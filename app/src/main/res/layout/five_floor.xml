@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -20,14 +19,43 @@
         android:layout_marginTop="10dp"
         android:src="@drawable/reservation_seats_guide"/>
 
-    <com.murgupluoglu.seatview.SeatView
-        android:id="@+id/seatView"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:seatViewBackgroundColor="#F4F4F4" />
+        android:layout_height="wrap_content">
+
+        <com.murgupluoglu.seatview.SeatView
+            android:id="@+id/seatView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:seatViewBackgroundColor="#F4F4F4" />
+
+        <TextView
+            android:layout_marginTop="24dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:background="#888888"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="정문 방향" />
+
+        <TextView
+            android:layout_marginBottom="24dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="#888888"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="자연과학대 방향" />
+    </FrameLayout>
 </LinearLayout>

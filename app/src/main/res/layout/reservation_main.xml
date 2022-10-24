@@ -44,6 +44,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#0066B3"
+                    android:textColor="#FFFFFF"
                     android:text="내 좌석" />
 
                 <Button
@@ -51,6 +53,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#0066B3"
+                    android:textColor="#FFFFFF"
                     android:text="3층 좌석" />
 
                 <Button
@@ -58,6 +62,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#0066B3"
+                    android:textColor="#FFFFFF"
                     android:text="4층 좌석" />
 
                 <Button
@@ -65,6 +71,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="#0066B3"
+                    android:textColor="#FFFFFF"
                     android:text="5층 좌석" />
             </LinearLayout>
 

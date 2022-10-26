@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallym_smartapp.MainActivity;
 import com.example.hallym_smartapp.R;
+import com.example.hallym_smartapp.Splash;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,7 +37,11 @@ public class LoginActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_layout);
+
+        //Splash
+        startActivity(new Intent(this, Splash.class));
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
@@ -92,5 +97,35 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
         }
+
+    // TEST code
+        /*Button btn5 = (Button) findViewById(R.id.fiveFloor);
+        btn5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), FiveFloorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn4 = (Button) findViewById(R.id.fourFloor);
+        btn4.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), FourFloorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn3 = (Button) findViewById(R.id.thirdFloor);
+        btn3.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), ThirdFloorActivity.class);
+                startActivity(intent);
+            }
+        });*/
 
 }

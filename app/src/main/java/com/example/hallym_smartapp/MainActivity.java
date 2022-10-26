@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         onBackPressed();
 
-        startActivity(new Intent(this, Splash.class));
-
         Btn_Libraryreserve =findViewById(R.id.Btn_Libraryreserve);
         Btn_myInfo=findViewById(R.id.Btn_myInfo);
 
@@ -51,37 +49,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        }); // 마이 페이지 설정
 
-
-
-        // TEST code
-        Button btn5 = (Button) findViewById(R.id.fiveFloor);
-        btn5.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), FiveFloorActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button btn4 = (Button) findViewById(R.id.fourFloor);
-        btn4.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), FourFloorActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button btn3 = (Button) findViewById(R.id.thirdFloor);
-        btn3.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), ThirdFloorActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
 

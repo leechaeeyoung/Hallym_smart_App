@@ -17,10 +17,10 @@
         <activity android:name=".Reservation.Activity.FiveFloorActivity"/>
         <activity android:name=".Reservation.Activity.FourFloorActivity"/>
         <activity android:name=".Reservation.Activity.ThirdFloorActivity"/>
-        <activity android:name=".Login.LoginActivity"/>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".Login.SignUp"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

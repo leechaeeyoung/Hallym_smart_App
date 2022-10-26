@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_mark"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="학번" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:hint="비밀번호" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="#0066B3"
+        android:textColor="#FFFFFF"
+        android:text="로그인"
+        android:textSize="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signBt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="#00B6AD"
+        android:textColor="#FFFFFF"
+        android:text="회원가입"
+        android:textSize="16dp"/>
+
+    <!--테스트용-->
+    <Button
+        android:id="@+id/fiveFloor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5층"/>
+
+    <Button
+        android:id="@+id/fourFloor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4층"/>
+
+    <Button
+        android:id="@+id/thirdFloor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3층"/>
+
+</LinearLayout>

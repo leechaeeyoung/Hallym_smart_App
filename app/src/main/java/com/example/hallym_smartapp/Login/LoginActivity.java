@@ -46,20 +46,25 @@ public class LoginActivity extends AppCompatActivity {
         signBt = findViewById(R.id.signBt);
 
         // 회원가입 버튼 클릭 이밴트
-        signBt.setOnClickListener(v -> {
-            intent = new Intent(getApplicationContext(), SignUp.class);
-            startActivity(intent);
+        signBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), SignUp.class);
+                startActivity(intent);
+            }
         });
+        // 로그인 버튼 클릭 이벤트
+        loginBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String id = idText.getText().toString();
+                String pw = passwordText.getText().toString();
 
-        // 로그인 버튼 클릭이벤트
-        loginBt.setOnClickListener(v -> {
-            String id = idText.getText().toString();
-            String pwd = passwordText.getText().toString();
-
-            if (id.equals("") || pwd.equals(""))
-                Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
-            else
-                loginCheck(id, pwd);
+                if (id.equals("") || pw.equals(""))
+                    Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
+                else
+                    loginCheck(id, pw);
+            }
         });
     }
         // 등록된 유저인지 확인

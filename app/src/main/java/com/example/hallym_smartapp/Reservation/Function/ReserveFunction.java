@@ -27,7 +27,6 @@ public class ReserveFunction extends Activity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.five_floor);
 
-
         }
     }
 }

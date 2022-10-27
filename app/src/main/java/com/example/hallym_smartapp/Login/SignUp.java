@@ -3,6 +3,7 @@ package com.example.hallym_smartapp.Login;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,15 @@ public class SignUp extends AppCompatActivity {
     private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private final DatabaseReference databaseReference = firebaseDatabase.getReference();
 
+    public SignUp(String id, String pw, String name) {
+        String key = databaseReference.child("User").push().getKey();
+        UserDTO userDTO = new UserDTO(id, pw, name);
+        Map<String, Object> postValues = userDTO.map();
+        Map<String, Object> childUpdates = new HashMap<>();
+        childUpdates.put("/User/" + id, postValues);
+        databaseReference.updateChildren(childUpdates);
+    }
+
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,24 +43,17 @@ public class SignUp extends AppCompatActivity {
         signBt = findViewById(R.id.signBt);
 
         // 회원가입 버튼 클릭 이벤트
-        signBt.setOnClickListener(v -> {
-            String id = newId.getText().toString();
-            String pwd = newPwd.getText().toString();
-            String name = newName.getText().toString();
-            UserDTO userDTO = new UserDTO(id, pwd, name);
-            signUp(id, pwd, name);
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(intent);
+        signBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String id = newId.getText().toString();
+                String pw = newPwd.getText().toString();
+                String name = newName.getText().toString();
+                UserDTO userDTO = new UserDTO(id, pw, name);
+                new SignUp(id, pw, name);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
         });
     }
-        // 회원가입
-    private void signUp(String id, String pwd, String name){
-        String Key = databaseReference.child("User").push().getKey();
-        UserDTO userDTO = new UserDTO(name, id, pwd);
-        Map<String, Object> postValues = userDTO.map();
-        Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/User/"+id, postValues);
-        databaseReference.updateChildren(childUpdates);
-    }
-
 }

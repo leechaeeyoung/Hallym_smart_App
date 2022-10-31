@@ -93,21 +93,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="3층 좌석 현황"
-                        android:textSize="20dp"/>
+                        android:textSize="24sp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
 
-                        <ProgressBar
-                            android:id="@+id/threeProg"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="20dp"
-                            android:max="184"
-                            android:progress="30"
-                            android:progressDrawable="@drawable/progressbar"
-                            style="?android:attr/progressBarStyleHorizontal"/>
+                        <TextView
+                            android:id="@+id/thirdSeatNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="24sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" / 184"
+                            android:textSize="24sp"
+                            />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -121,21 +127,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="4층 좌석 현황"
-                        android:textSize="20dp"/>
+                        android:textSize="24dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
 
-                        <ProgressBar
-                            android:id="@+id/fourProg"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="20dp"
-                            android:max="97"
-                            android:progress="30"
-                            android:progressDrawable="@drawable/progressbar"
-                            style="?android:attr/progressBarStyleHorizontal"/>
+                        <TextView
+                            android:id="@+id/fourSeatNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="24sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" / 97"
+                            android:textSize="24sp"
+                            />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -149,21 +161,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="5층 좌석 현황"
-                        android:textSize="20dp"/>
+                        android:textSize="24dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
 
-                        <ProgressBar
-                            android:id="@+id/fiveProg"
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"
-                            android:layout_marginTop="20dp"
-                            android:max="88"
-                            android:progress="30"
-                            android:progressDrawable="@drawable/progressbar"
-                            style="?android:attr/progressBarStyleHorizontal"/>
+                        <TextView
+                            android:id="@+id/fiveSeatNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="24sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" / 88"
+                            android:textSize="24sp"
+                            />
                     </LinearLayout>
                 </LinearLayout>
 

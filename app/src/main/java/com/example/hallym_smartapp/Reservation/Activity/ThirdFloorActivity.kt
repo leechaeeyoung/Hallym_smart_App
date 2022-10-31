@@ -38,7 +38,6 @@ class ThirdFloorActivity : AppCompatActivity() {
 
     private fun defaultSeat() {
         val rowNames : HashMap<String, String> = HashMap()
-
         val fiveSeat = JSONObject(loadJSONFromAsset()) //메소드 호출
         val rowCount = fiveSeat.getJSONObject("Third Floor").getInt("totalRow")
         val columnCount = fiveSeat.getJSONObject("Third Floor").getInt("totalColumn")

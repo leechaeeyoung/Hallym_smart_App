@@ -21,15 +21,16 @@ public class SeatDao {
         userDTO.setReservationDate("");
         userDTO.setRemainTime("");
         userDTO.setFloorNum(0);
-        userDTO.setSeatNum(0);
+        userDTO.setRowNames("");
         Map<String, Object> postValues = userDTO.map();
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("/User/"+loginId, postValues);
         databaseReference.updateChildren(childUpdates);
     }
     // 유저 정보 업데이트
-    public void updateUser(int position, int floorNum, UserDTO userDTO,boolean seatState,String startTime,String remainTime){
-        userDTO.setSeatNum(position+1);
+    public void updateUser(String rowName, int rowIndex, int floorNum, UserDTO userDTO,boolean seatState,String startTime,String remainTime){
+        userDTO.setRowNames(rowName);
+        userDTO.setRowIndex(rowIndex);
         userDTO.setFloorNum(floorNum);
         userDTO.setSeatState(seatState);
         userDTO.setReservationDate(startTime);
@@ -40,12 +41,12 @@ public class SeatDao {
         databaseReference.updateChildren(childUpdates);
     }
     // 좌석 정보 업데이트
-    public void updateSeat(int position, String startTime){
+    public void updateSeat(String rowNames, int rowIndex, String startTime){
         String key = databaseReference.child("Floor").push().getKey();
-        SeatDto seatDB = new SeatDto(position,loginId, true,startTime);
+        SeatDto seatDB = new SeatDto(rowNames,rowIndex,loginId, true,startTime);
         Map<String, Object> postValues = seatDB.map();
         Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/Floor/"+(position+1)+"seat",postValues);
+        childUpdates.put("/Floor/"+rowNames+rowIndex+"seat",postValues);
         databaseReference.updateChildren(childUpdates);
     }
 

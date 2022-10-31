@@ -1,7 +1,5 @@
 package com.example.hallym_smartapp.Reservation.Function;
 
-import androidx.room.Ignore;
-
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
@@ -11,29 +9,39 @@ import java.util.Map;
 // 데이터 교환
 @IgnoreExtraProperties
 public class SeatDto {
-    private int seatNum;
+    private int rowIndex;
+    private String rowNames;
     private String userId = "";
     private boolean seatState = false;
     private String remainTime = "";
 
-    public SeatDto(int seatNum) {
-        this.seatNum = seatNum;
+    public SeatDto(int rowIndex, String rowNames) {
+        this.rowIndex = rowIndex;
+        this.rowNames = rowNames;
     }
 
-    public SeatDto(int seatNum, String userId, boolean seatState, String remainTime) {
-        this.seatNum = seatNum;
+    public SeatDto(String rowNames, int rowIndex,String userId, boolean seatState, String remainTime) {
+        this.rowNames = rowNames;
+        this.rowIndex = rowIndex;
         this.userId = userId;
         this.seatState = seatState;
         this.remainTime = remainTime;
     }
 
-    public int getSeatNum() {
-        return seatNum;
+    public SeatDto(int position, String loginId, boolean b, String startTime) {
     }
 
-    public void setSeatNum(int seatNum) {
-        this.seatNum = seatNum;
+    public String getRowNames() {
+        return rowNames;
     }
+
+    public void setRowNames(String rowNames) {
+        this.rowNames = rowNames;
+    }
+    
+    public int getRowIndex(){return rowIndex;}
+    
+    public void setRowIndex(int rowIndex){ this.rowIndex = rowIndex; }
 
     public String getUsedId() {
         return userId;
@@ -64,7 +72,8 @@ public class SeatDto {
     @Exclude
     public Map<String, Object> map(){
         HashMap<String,Object> result = new HashMap<>();
-        result.put("seatNum",seatNum);
+        result.put("rowNames",rowNames);
+        result.put("rowIndex",rowIndex);
         result.put("userId",userId);
         result.put("seatState",seatState);
         result.put("remainTime",remainTime);

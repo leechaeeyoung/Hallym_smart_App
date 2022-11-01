@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallym_smartapp.MainActivity;
 import com.example.hallym_smartapp.R;
+import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
 import com.example.hallym_smartapp.Splash;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -69,6 +70,16 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
                 else
                     loginCheck(id, pw);
+            }
+        });
+
+        // 예약 메인 화면 테스트
+        Button btnMain = (Button)findViewById(R.id.main);
+        btnMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), ReservationActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -127,5 +138,4 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });*/
-
 }

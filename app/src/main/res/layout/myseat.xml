@@ -35,8 +35,7 @@
                 android:layout_marginRight="10dp"
                 android:text="예약 좌석"
                 android:textSize="18sp"
-                android:textColor="#000000"
-                android:background=""/>
+                android:textColor="#000000"/>
 
             <TextView
                 android:id="@+id/todaySeat"

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#00B6AD"
+    android:padding="30dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 좌석"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="예약 좌석"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:background=""/>
+
+            <TextView
+                android:id="@+id/todaySeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좌석 정보"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

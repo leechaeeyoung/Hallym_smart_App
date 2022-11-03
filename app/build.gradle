@@ -54,4 +54,5 @@ dependencies {
     annotationProcessor 'androidx.room:room-compiler:2.4.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-script-runtime:1.7.10"
 }

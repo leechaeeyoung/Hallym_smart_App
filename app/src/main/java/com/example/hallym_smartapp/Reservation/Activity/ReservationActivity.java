@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hallym_smartapp.R;
+import com.example.hallym_smartapp.Reservation.Flag.MyPageFrag;
 import com.example.hallym_smartapp.Reservation.Flag.Fragment2;
 import com.example.hallym_smartapp.Reservation.Flag.Fragment3;
 import com.example.hallym_smartapp.Reservation.Flag.Fragment4;
@@ -25,6 +26,7 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
 
 
     // 층수마다 플래그
+    private final int MyPageFrag=1;
     private final int FRAGMENT2=2;
     private final int FRAGMENT3=3;
     private final int FRAGMENT4=4;
@@ -35,14 +37,16 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.reservation_main);
 
         // tab키 참조
+        bt_tab1=(Button)findViewById(R.id.bt_tab1);
         bt_tab2=(Button)findViewById(R.id.bt_tab2);
         bt_tab3=(Button)findViewById(R.id.bt_tab3);
         bt_tab4=(Button)findViewById(R.id.bt_tab4);
 
         // 버튼 누를 때 리스너 연결
+        bt_tab1.setOnClickListener(this);
         bt_tab2.setOnClickListener(this);
         bt_tab3.setOnClickListener(this);
         bt_tab4.setOnClickListener(this);
@@ -51,6 +55,9 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.bt_tab1:
+                callFragment(MyPageFrag);
+                break;
             case R.id.bt_tab2:
                 // 3층 버튼 클릭 시 프래그 2 호출
                 callFragment(FRAGMENT2);
@@ -70,6 +77,11 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         switch (fragment_no){
+            case 1:
+                MyPageFrag mypage = new MyPageFrag();
+                transaction.replace(R.id.fragment_container, mypage);
+                transaction.commit();
+                break;
             case 2:
                 Fragment2 frag2 = new Fragment2();
                 transaction.replace(R.id.fragment_container, frag2);
@@ -95,5 +107,4 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
         databaseReference.updateChildren(childUpdates);
     }
-
 }

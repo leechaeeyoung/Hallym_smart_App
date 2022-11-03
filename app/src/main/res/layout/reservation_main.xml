@@ -84,6 +84,7 @@
                 android:layout_marginLeft="20dp">
 
                 <LinearLayout
+                    android:id="@+id/list_3floor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

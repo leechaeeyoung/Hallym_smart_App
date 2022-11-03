@@ -3,6 +3,7 @@ package com.example.hallym_smartapp.Reservation.Function;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ import com.google.firebase.database.ValueEventListener;
 //3층 자리 예약 test
 public class SeatList extends AppCompatActivity {
     Intent intent;
+    LinearLayout list_3floor;
+    TextView nowSeat_3floor;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -30,6 +33,9 @@ public class SeatList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("좌석 현황");
         setContentView(R.layout.reservation_main);
+
+        list_3floor = findViewById(R.id.list_3floor);
+        nowCnt();
     }
     
     // 현재 좌석 수를 나타네는 메소드
@@ -40,14 +46,25 @@ public class SeatList extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 SeatCnt seatCnt = snapshot.getValue(SeatCnt.class);
                 String nowCnt = seatCnt.getNowSeatCnt();
-//                totalSeat = Integer.parseInt(seatCnt.getNowSeatCnt());
+                int totalSeat = Integer.parseInt(seatCnt.getNowSeatCnt());
 
+                nowSeat_3floor = findViewById(R.id.thirdSeatNum);
+                nowSeat_3floor.setText(nowCnt);
+
+                list_3floor.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        intent = new Intent(getApplicationContext(),SeatList.class);
+                        startActivity(intent);
+                    }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Log.v("loadPost:onCancelled", String.valueOf(error.toException()));
+
             }
         });
+
     }
 }

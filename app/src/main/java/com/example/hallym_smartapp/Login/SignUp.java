@@ -24,6 +24,10 @@ public class SignUp extends AppCompatActivity {
     private final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private final DatabaseReference databaseReference = firebaseDatabase.getReference();
 
+    public SignUp(){
+
+    }
+
     public SignUp(String id, String pw, String name) {
         String key = databaseReference.child("User").push().getKey();
         UserDTO userDTO = new UserDTO(id,pw,name);

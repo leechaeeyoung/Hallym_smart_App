@@ -60,20 +60,20 @@ public class SeatDao {
         childUpdates.put("/Floor/"+usedSeat+"seat",postValues);
         databaseReference.updateChildren(childUpdates);
     }
-    // 좌석 예약 완료 시 남은 좌석 down
-    public void downCnt(){
-        SeatCnt seatCnt = new SeatCnt(Integer.toString(totalCnt-1));
-        Map<String,Object> postValues = seatCnt.map();
-        Map<String, Object> childUpdates = new HashMap<>();
-        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
-        databaseReference.updateChildren(childUpdates);
-    }
-    // 좌석 반납 시 남은 좌석 up
-    public void upCnt(){
-        SeatCnt seatCnt = new SeatCnt(Integer.toString(totalCnt+1));
-        Map<String,Object> postValues = seatCnt.map();
-        Map<String, Object> childUpdates = new HashMap<>();
-        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
-        databaseReference.updateChildren(childUpdates);
-    }
+//    // 좌석 예약 완료 시 남은 좌석 down
+//    public void downCnt(){
+//        SeatCnt seatCnt = new SeatCnt(Integer.toString(totalCnt-1));
+//        Map<String,Object> postValues = seatCnt.map();
+//        Map<String, Object> childUpdates = new HashMap<>();
+//        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
+//        databaseReference.updateChildren(childUpdates);
+//    }
+//    // 좌석 반납 시 남은 좌석 up
+//    public void upCnt(){
+//        SeatCnt seatCnt = new SeatCnt(Integer.toString(totalCnt+1));
+//        Map<String,Object> postValues = seatCnt.map();
+//        Map<String, Object> childUpdates = new HashMap<>();
+//        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
+//        databaseReference.updateChildren(childUpdates);
+//    }
 }

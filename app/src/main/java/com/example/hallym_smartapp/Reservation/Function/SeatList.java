@@ -46,17 +46,14 @@ public class SeatList extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 SeatCnt seatCnt = snapshot.getValue(SeatCnt.class);
                 String nowCnt = seatCnt.getNowSeatCnt();
-                int totalSeat = Integer.parseInt(seatCnt.getNowSeatCnt());
+                totalCnt = Integer.parseInt(seatCnt.getNowSeatCnt());
 
                 nowSeat_3floor = findViewById(R.id.thirdSeatNum);
                 nowSeat_3floor.setText(nowCnt);
 
-                list_3floor.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        intent = new Intent(getApplicationContext(),SeatList.class);
-                        startActivity(intent);
-                    }
+                list_3floor.setOnClickListener(v -> {
+                    intent = new Intent(getApplicationContext(),SeatList.class);
+                    startActivity(intent);
                 });
             }
 

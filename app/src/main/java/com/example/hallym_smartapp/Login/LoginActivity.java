@@ -3,7 +3,6 @@ package com.example.hallym_smartapp.Login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 
 public class LoginActivity extends AppCompatActivity {
     EditText idText, passwordText;
@@ -34,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public static boolean loginStatus = false; // 기본으로 로그인 상태가 아님으로 표시
     public static String loginId="";
-    public static UserDTO userDTO;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,35 +52,26 @@ public class LoginActivity extends AppCompatActivity {
         signBt = findViewById(R.id.signBt);
 
         // 회원가입 버튼 클릭 이밴트
-        signBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(getApplicationContext(), SignUp.class);
-                startActivity(intent);
-            }
+        signBt.setOnClickListener(v -> {
+            intent = new Intent(getApplicationContext(), SignUp.class);
+            startActivity(intent);
         });
         // 로그인 버튼 클릭 이벤트
-        loginBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String id = idText.getText().toString();
-                String pw = passwordText.getText().toString();
+        loginBt.setOnClickListener(v -> {
+            String id = idText.getText().toString();
+            String pw = passwordText.getText().toString();
 
-                if (id.equals("") || pw.equals(""))
-                    Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
-                else
-                    loginCheck(id, pw);
-            }
+            if (id.equals("") || pw.equals(""))
+                Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
+            else
+                loginCheck(id, pw);
         });
 
         // 예약 메인 화면 테스트
-        Button btnMain = (Button)findViewById(R.id.main);
-        btnMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(getApplicationContext(), ReservationActivity.class);
-                startActivity(intent);
-            }
+        Button btnMain = findViewById(R.id.main);
+        btnMain.setOnClickListener(v -> {
+            intent = new Intent(getApplicationContext(), ReservationActivity.class);
+            startActivity(intent);
         });
     }
         // 등록된 유저인지 확인

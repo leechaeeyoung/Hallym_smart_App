@@ -21,7 +21,7 @@ public class ReserveFunction extends Activity {
     SeatDao seatDao = new SeatDao();
     public void reservationSeat(String rowName, int rowIndex, int floorNum,UserDTO userDTO, List<SeatDto> seatDto, String reservationTime){
         //좌석수 +1
-        seatDao.upCnt();
+//        seatDao.upCnt();
         // 좌석 정보 업데이트
         seatDao.updateSeat(rowName,rowIndex,reservationTime);
         // 학생 정보 업데이트

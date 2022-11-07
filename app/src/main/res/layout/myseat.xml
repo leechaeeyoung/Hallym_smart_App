@@ -25,34 +25,74 @@
         android:padding="10dp"
         android:layout_marginTop="20dp">
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="예약 좌석"
-                android:textSize="18sp"
-                android:textColor="#000000"/>
+                android:layout_marginTop="10dp">
 
-            <TextView
-                android:id="@+id/todaySeat"
-                android:layout_width="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="예약 좌석"
+                    android:textSize="18sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/todaySeat"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="좌석 정보"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="좌석 정보"
-                android:textSize="18sp"/>
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="남은 시간"
+                    android:textSize="18sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/timeRem"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="시간 정보"
+                    android:textSize="18sp"/>
+            </LinearLayout>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/extendBt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#cccccc"
+                android:textColor="#000000"
+                android:text="시간 연장"
+                android:textSize="16dp"
+                android:layout_marginRight="15dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cancelBt"

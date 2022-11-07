@@ -46,7 +46,7 @@ public class SeatList extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 SeatCnt seatCnt = snapshot.getValue(SeatCnt.class);
                 String nowCnt = seatCnt.getNowSeatCnt();
-                totalCnt = Integer.parseInt(seatCnt.getNowSeatCnt());
+//                totalCnt = Integer.parseInt(seatCnt.getNowSeatCnt());
 
                 nowSeat_3floor = findViewById(R.id.thirdSeatNum);
                 nowSeat_3floor.setText(nowCnt);

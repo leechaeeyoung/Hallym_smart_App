@@ -2,10 +2,12 @@ package com.example.hallym_smartapp.MyPage;
 
 import static com.example.hallym_smartapp.Login.LoginActivity.loginStatus;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,16 +26,20 @@ import java.sql.Time;
 
 public class MyPage extends AppCompatActivity {
     Button Btn_myInfo;
+    TextView myIdInfo,myNameInfo;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
+    @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage);
 
         setTitle("마이페이지");
-//        if(loginStatus)
+        myIdInfo = findViewById(R.id.myNameInfo);
+        myNameInfo = findViewById(R.id.myNameInfo);
+        Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
     }
 
     // 사용자 개인정보 조회
@@ -43,6 +49,12 @@ public class MyPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 final UserDTO userDTO = snapshot.getValue(UserDTO.class);
+
+                //user 예약 상태, 예약 시간....설정
+
+                // mypage에 학번, 이름뜨는 칸
+                myNameInfo.setText(userDTO.getName());
+                myIdInfo.setText(userDTO.getId());
             }
 
             @Override

@@ -26,7 +26,7 @@ import java.sql.Time;
 
 public class MyPage extends AppCompatActivity {
     Button Btn_myInfo;
-    TextView myIdInfo,myNameInfo;
+    TextView myIdInfo,myNameInfo,todaySeat,timerem;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -37,8 +37,10 @@ public class MyPage extends AppCompatActivity {
         setContentView(R.layout.mypage);
 
         setTitle("마이페이지");
-        myIdInfo = findViewById(R.id.myNameInfo);
-        myNameInfo = findViewById(R.id.myNameInfo);
+        myIdInfo = (TextView)findViewById(R.id.myNameInfo);
+        myNameInfo = (TextView)findViewById(R.id.myNameInfo);
+        todaySeat = (TextView)findViewById(R.id.todaySeat);
+        timerem = (TextView)findViewById(R.id.timerem);
         Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
     }
 
@@ -49,9 +51,9 @@ public class MyPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 final UserDTO userDTO = snapshot.getValue(UserDTO.class);
-
                 //user 예약 상태, 예약 시간....설정
-
+                if(userDTO.isSeatState()){
+                }
                 // mypage에 학번, 이름뜨는 칸
                 myNameInfo.setText(userDTO.getName());
                 myIdInfo.setText(userDTO.getId());

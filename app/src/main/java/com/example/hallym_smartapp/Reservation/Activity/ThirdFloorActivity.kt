@@ -1,5 +1,6 @@
 package com.example.hallym_smartapp.Reservation.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hallym_smartapp.R
@@ -8,9 +9,11 @@ import com.murgupluoglu.seatview.SeatViewListener
 import kotlinx.android.synthetic.main.three_floor.*
 import org.json.JSONArray
 import org.json.JSONObject
-import java.util.*
+
 
 class ThirdFloorActivity : AppCompatActivity() {
+    var seatNum:Int = 0;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.three_floor)
@@ -18,7 +21,8 @@ class ThirdFloorActivity : AppCompatActivity() {
 
         seatView.seatViewListener = object : SeatViewListener {
             override fun seatSelected(selectedSeat: Seat, selectedSeats: HashMap<String, Seat>) {
-
+                val intent = Intent(context, ConfirmSeatActivity::class.java)
+                startActivity(intent)
             } //좌석 선택시
 
             override fun seatReleased(releasedSeat: Seat, selectedSeats: HashMap<String, Seat>) {
@@ -109,6 +113,7 @@ class ThirdFloorActivity : AppCompatActivity() {
                         seat.drawableResourceName = "seat_notavailable" //이용 불가 좌석
                         seat.type = Seat.TYPE.UNSELECTABLE
                         seat.selectedDrawableResourceName = "ic_android_24dp"
+                        seatNum++
                     }
                 }
 

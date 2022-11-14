@@ -59,18 +59,6 @@
 
     <!--테스트용-->
     <Button
-        android:id="@+id/fiveFloor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="5층"/>
-
-    <Button
-        android:id="@+id/fourFloor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="4층"/>
-
-    <Button
         android:id="@+id/thirdFloor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

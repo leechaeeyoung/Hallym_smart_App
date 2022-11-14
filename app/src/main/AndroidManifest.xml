@@ -18,6 +18,7 @@
         <activity android:name=".Reservation.Activity.FourFloorActivity"/>
         <activity android:name=".Reservation.Activity.ThirdFloorActivity"/>
         <activity android:name=".Reservation.Activity.ReservationActivity"/>
+        <activity android:name=".Reservation.Activity.ThreeFloorActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".Login.SignUp"/>
         <activity

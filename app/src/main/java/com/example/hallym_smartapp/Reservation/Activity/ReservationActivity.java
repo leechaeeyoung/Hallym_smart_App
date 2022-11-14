@@ -1,9 +1,11 @@
 package com.example.hallym_smartapp.Reservation.Activity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -33,6 +35,8 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
 
     private Button bt_tab1, bt_tab2, bt_tab3, bt_tab4;
 
+    TextView three;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,7 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         bt_tab2.setOnClickListener(this);
         bt_tab3.setOnClickListener(this);
         bt_tab4.setOnClickListener(this);
+
     }
 
     @Override

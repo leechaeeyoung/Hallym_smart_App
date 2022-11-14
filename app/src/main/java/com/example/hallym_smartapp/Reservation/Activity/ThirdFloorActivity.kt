@@ -1,6 +1,6 @@
 package com.example.hallym_smartapp.Reservation.Activity
 
-import android.content.Intent
+import android.app.Dialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hallym_smartapp.R
@@ -21,8 +21,7 @@ class ThirdFloorActivity : AppCompatActivity() {
 
         seatView.seatViewListener = object : SeatViewListener {
             override fun seatSelected(selectedSeat: Seat, selectedSeats: HashMap<String, Seat>) {
-                val intent = Intent(context, ConfirmSeatActivity::class.java)
-                startActivity(intent)
+
             } //좌석 선택시
 
             override fun seatReleased(releasedSeat: Seat, selectedSeats: HashMap<String, Seat>) {

@@ -3,6 +3,7 @@ package com.example.hallym_smartapp.Login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.hallym_smartapp.MainActivity;
 import com.example.hallym_smartapp.R;
 import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
+import com.example.hallym_smartapp.Reservation.Activity.ThreeFloorActivity;
 import com.example.hallym_smartapp.Splash;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -73,6 +75,16 @@ public class LoginActivity extends AppCompatActivity {
             intent = new Intent(getApplicationContext(), ReservationActivity.class);
             startActivity(intent);
         });
+
+        Button btn3 = (Button) findViewById(R.id.thirdFloor);
+        btn3.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), ThreeFloorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
         // 등록된 유저인지 확인
         public void loginCheck(final String id,final String pwd){
@@ -101,26 +113,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     // TEST code
-        /*Button btn5 = (Button) findViewById(R.id.fiveFloor);
-        btn5.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), FiveFloorActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button btn4 = (Button) findViewById(R.id.fourFloor);
-        btn4.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), FourFloorActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button btn3 = (Button) findViewById(R.id.thirdFloor);
+/*        Button btn3 = (Button) findViewById(R.id.thirdFloor);
         btn3.setOnClickListener(new View.OnClickListener(){
 
             @Override

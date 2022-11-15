@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     Button Btn_Libraryreserve, Btn_myInfo;
     Intent intent;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

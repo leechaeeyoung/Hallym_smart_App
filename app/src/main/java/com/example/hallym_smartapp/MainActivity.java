@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     Button Btn_Libraryreserve, Btn_myInfo,loginBt;
     Intent intent;
 
-    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

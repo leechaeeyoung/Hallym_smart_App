@@ -134,7 +134,7 @@ public class ReserveDialog extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
+                        Log.w("loadPost:onCancelled", error.toException());
                     }
                 });
             }

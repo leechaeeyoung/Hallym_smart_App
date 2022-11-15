@@ -67,6 +67,9 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
             else
                 loginCheck(id, pw);
+            intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+
         });
 
         // 예약 메인 화면 테스트
@@ -77,13 +80,9 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         Button btn3 = (Button) findViewById(R.id.thirdFloor);
-        btn3.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), ThreeFloorActivity.class);
-                startActivity(intent);
-            }
+        btn3.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), ThreeFloorActivity.class);
+            startActivity(intent);
         });
     }
         // 등록된 유저인지 확인
@@ -93,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.hasChild(id))
-                        if(snapshot.child(id).child("pwd").getValue().equals(pwd)){
+                        if(Objects.equals(snapshot.child(id).child("pwd").getValue(), pwd)){
                             Log.e("loginCheck: ", "로그인 되었습니다.");
                             loginStatus = true;
                             loginId = id;

@@ -50,10 +50,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
         }); // 마이 페이지 클릭
 
-        loginBt.setOnClickListener(v -> {
-            intent = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(intent);
-        }); //로그인 클릭
     }
 //    public void seatCntDB(){
 //        SeatCnt seatCnt = new SeatCnt(Integer.toString(90));

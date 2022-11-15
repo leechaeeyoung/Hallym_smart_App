@@ -91,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(snapshot.hasChild(id))
                         if(snapshot.child(id).child("pwd").getValue().equals(pwd)){
                             Log.e("loginCheck: ", "로그인 되었습니다.");
+                            Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
                             loginStatus = true;
                             loginId = id;
 
@@ -98,8 +99,10 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(intent);
                         } else{
                             Log.e("loginCheck: ","비밀번호가 틀렸습니다.");
+                            Toast.makeText(getApplicationContext(), "아이디 또는 패스워드를 다시 확인하세요.", Toast.LENGTH_LONG).show();
                     }else
                         Log.e("loginCheck: "," 해당 아이디가 존재하지 않습니다.");
+                    Toast.makeText(getApplicationContext(), "아이디 또는 패스워드를 다시 확인하세요.", Toast.LENGTH_LONG).show();
                 }
 
                 @Override

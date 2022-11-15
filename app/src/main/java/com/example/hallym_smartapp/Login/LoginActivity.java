@@ -67,9 +67,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
             else
                 loginCheck(id, pw);
-            intent = new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(intent);
-
         });
 
         // 예약 메인 화면 테스트
@@ -96,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.e("loginCheck: ", "로그인 되었습니다.");
                             loginStatus = true;
                             loginId = id;
+
                             intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
                         } else{

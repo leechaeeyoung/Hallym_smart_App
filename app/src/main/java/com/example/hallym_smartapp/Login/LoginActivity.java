@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.hasChild(id))
-                        if(Objects.equals(snapshot.child(id).child("pwd").getValue(), pwd)){
+                        if(snapshot.child(id).child("pwd").getValue().equals(pwd)){
                             Log.e("loginCheck: ", "로그인 되었습니다.");
                             loginStatus = true;
                             loginId = id;

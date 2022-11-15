@@ -21,13 +21,14 @@ import com.example.hallym_smartapp.Reservation.Function.SeatList;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference = firebaseDatabase.getReference();
 
-    Button Btn_Libraryreserve, Btn_myInfo,loginBt;
+    Button Btn_Libraryreserve, Btn_myInfo;
     Intent intent;
 
     @Override
@@ -48,12 +49,16 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(getApplicationContext(), MyPage.class);
                 startActivity(intent);
         }); // 마이 페이지 클릭
-
     }
-//    public void seatCntDB(){
-//        SeatCnt seatCnt = new SeatCnt(Integer.toString(90));
-//        Map<String, Object> postValues = seatCnt.map();
-//        Map<String,>
-//    }
+    public void onBackPressed(){}
+    
+    //DB에 좌석수 정보 set
+    public void seatCntDB(){
+        SeatCnt seatCnt = new SeatCnt(Integer.toString(90));
+        Map<String, Object> postValues = seatCnt.map();
+        Map<String,Object> childUpdates = new HashMap<>();
+        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
+        databaseReference.updateChildren(childUpdates);
+    }
 }
 

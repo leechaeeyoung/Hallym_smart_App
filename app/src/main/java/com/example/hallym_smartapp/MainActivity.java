@@ -16,9 +16,12 @@ import com.example.hallym_smartapp.MyPage.MyPage;
 import com.example.hallym_smartapp.Reservation.Activity.FiveFloorActivity;
 import com.example.hallym_smartapp.Reservation.Activity.FourFloorActivity;
 import com.example.hallym_smartapp.Reservation.Activity.ThirdFloorActivity;
+import com.example.hallym_smartapp.Reservation.Function.SeatCnt;
 import com.example.hallym_smartapp.Reservation.Function.SeatList;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         Btn_Libraryreserve.setOnClickListener(v -> {
             intent = new Intent(getApplicationContext(), SeatList.class);
+            startActivity(intent);
         }); // 도서관 예약 클릭
 
         Btn_myInfo.setOnClickListener(v -> {
@@ -51,5 +55,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }); //로그인 클릭
     }
+//    public void seatCntDB(){
+//        SeatCnt seatCnt = new SeatCnt(Integer.toString(90));
+//        Map<String, Object> postValues = seatCnt.map();
+//        Map<String,>
+//    }
 }
 

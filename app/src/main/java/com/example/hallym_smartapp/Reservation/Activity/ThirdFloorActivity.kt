@@ -16,7 +16,6 @@ class ThirdFloorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.three_floor)
 
 
         seatView.seatViewListener = object : SeatViewListener {

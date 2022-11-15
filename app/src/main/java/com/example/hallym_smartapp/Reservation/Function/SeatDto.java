@@ -10,17 +10,17 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class SeatDto {
     private int rowIndex;
-    private String rowNames;
+    private char rowNames;
     private String userId = "";
     private boolean seatState = false;
     private String remainTime = "";
 
-    public SeatDto(int rowIndex, String rowNames) {
+    public SeatDto(char rowNames,int rowIndex) {
         this.rowIndex = rowIndex;
         this.rowNames = rowNames;
     }
 
-    public SeatDto(String rowNames, int rowIndex,String userId, boolean seatState, String remainTime) {
+    public SeatDto(char rowNames, int rowIndex,String userId, boolean seatState, String remainTime) {
         this.rowNames = rowNames;
         this.rowIndex = rowIndex;
         this.userId = userId;
@@ -28,17 +28,14 @@ public class SeatDto {
         this.remainTime = remainTime;
     }
 
-    public SeatDto(int position, String loginId, boolean b, String startTime) {
-    }
-
-    public String getRowNames() {
+    public char getRowNames() {
         return rowNames;
     }
 
-    public void setRowNames(String rowNames) {
+    public void setRowNames(char rowNames) {
         this.rowNames = rowNames;
     }
-    
+
     public int getRowIndex(){return rowIndex;}
     
     public void setRowIndex(int rowIndex){ this.rowIndex = rowIndex; }

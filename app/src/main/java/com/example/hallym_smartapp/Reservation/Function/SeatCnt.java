@@ -8,7 +8,7 @@ import java.util.Map;
 
 @IgnoreExtraProperties
 public class SeatCnt {
-    private String nowSeatCnt = "30";
+    private String nowSeatCnt = "90";
 
     public SeatCnt(){}
     public SeatCnt(String nowSeatCnt){

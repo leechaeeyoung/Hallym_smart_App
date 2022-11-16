@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallym_smartapp.MyPage.MyPage;
+import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
 import com.example.hallym_smartapp.Reservation.Function.SeatCnt;
 import com.example.hallym_smartapp.Reservation.Function.SeatList;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Btn_myInfo=findViewById(R.id.Btn_myInfo);
 
         Btn_Libraryreserve.setOnClickListener(v -> {
-            intent = new Intent(getApplicationContext(), SeatList.class);
+            intent = new Intent(getApplicationContext(), ReservationActivity.class);
             startActivity(intent);
         }); // 도서관 예약 클릭
 

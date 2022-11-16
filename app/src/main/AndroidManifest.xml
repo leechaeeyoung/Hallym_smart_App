@@ -25,9 +25,18 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".Reservation.Activity.ReservationActivity"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+        </activity>
         <activity android:name=".Splash" android:theme="@android:style/Theme.NoTitleBar" />
-<!--        <activity android:name=".Reservation.Activity.FiveFloorActivity"/>-->
-<!--        <activity android:name=".Reservation.Activity.FourFloorActivity"/>-->
         <activity android:name=".Reservation.Activity.ThirdFloorActivity"/>
         <activity android:name=".Reservation.Activity.ReservationActivity"/>
         <activity android:name=".MainActivity"/>

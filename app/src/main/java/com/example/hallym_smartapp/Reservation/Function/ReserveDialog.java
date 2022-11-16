@@ -110,7 +110,7 @@ public class ReserveDialog extends AppCompatActivity {
     }
 
     // 예약취소 다이얼로그
-    public void returnDialog(final List<SeatDto>seatDto, final UserDTO userDTO){
+    public void cancelDialog(final List<SeatDto>seatDto, final UserDTO userDTO){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("반납");
         builder.setMessage(displayTime()+"\n예약취소/반납하시겠습니까?");
@@ -164,5 +164,6 @@ public class ReserveDialog extends AppCompatActivity {
                 databaseReference.updateChildren(seatUpdates);
             }
         }
-    }
+
+}
 

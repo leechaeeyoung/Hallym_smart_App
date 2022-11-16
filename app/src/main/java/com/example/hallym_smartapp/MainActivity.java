@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.hallym_smartapp.MyPage.MyPage;
 import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
 import com.example.hallym_smartapp.Reservation.Function.SeatCnt;
-import com.example.hallym_smartapp.Reservation.Function.SeatList;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

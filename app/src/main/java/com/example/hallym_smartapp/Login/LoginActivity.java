@@ -72,11 +72,11 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button btn3 = (Button) findViewById(R.id.thirdFloor);
+        /*Button btn3 = (Button) findViewById(R.id.thirdFloor);
         btn3.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), ThreeFloorActivity.class);
             startActivity(intent);
-        });
+        });*/
     }
         // 등록된 유저인지 확인
         public void loginCheck(final String id,final String pwd){
@@ -96,9 +96,10 @@ public class LoginActivity extends AppCompatActivity {
                         } else{
                             Log.e("loginCheck: ","비밀번호가 틀렸습니다.");
                             Toast.makeText(getApplicationContext(), "아이디 또는 패스워드를 다시 확인하세요.", Toast.LENGTH_LONG).show();
-                    }else
+                    }else{
                         Log.e("loginCheck: "," 해당 아이디가 존재하지 않습니다.");
-                    Toast.makeText(getApplicationContext(), "아이디 또는 패스워드를 다시 확인하세요.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "아이디 또는 패스워드를 다시 확인하세요.", Toast.LENGTH_LONG).show();
+                    }
                 }
 
                 @Override

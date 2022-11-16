@@ -70,14 +70,15 @@ public class ReserveDialog extends AppCompatActivity {
         date = new Date(now);
         return format.format(date);
     }
+
     // 예약 다이얼로그
-    public void reservationDialog(final char rowName, final int rowIndex, final int floorNum, final UserDTO userDTO, final List<SeatDto> seatDto){
+    public void reservationDialog(final int seatNum, final int floorNum, final UserDTO userDTO, final List<SeatDto> seatDto){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("예약(현재좌석: "+rowName+rowIndex+"\n예약하시겠습니까?").setCancelable(false).setPositiveButton("예", new DialogInterface.OnClickListener() {
+        builder.setTitle("예약(현재좌석: "+seatNum+"\n예약하시겠습니까?").setCancelable(false).setPositiveButton("예", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                ReservatioFunction.moveSeat(rowName, rowIndex, floorNum, userDTO, seatDto);
-                Toast.makeText(context,rowName+rowIndex+"번 자리가 예약되었습니다.", Toast.LENGTH_SHORT).show();
+                ReservatioFunction.moveSeat(seatNum, floorNum, userDTO, seatDto);
+                Toast.makeText(context,seatNum+"번 자리가 예약되었습니다.", Toast.LENGTH_SHORT).show();
                 TimeConvert timeConvert = new TimeConvert(userDTO.getRemainTime());
                 Long timeValue = timeConvert.getDiff();
             }
@@ -93,13 +94,13 @@ public class ReserveDialog extends AppCompatActivity {
     }
 
     // 이동 다이얼로그
-    public void moveDialog(final char rowName, final int rowIndex, final int floorNum, final UserDTO userDTO, final List<SeatDto> seatDto) {
+    public void moveDialog(final int seatNum, final int floorNum, final UserDTO userDTO, final List<SeatDto> seatDto) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("이동(변경좌석: " + floorNum + rowName + rowIndex + "번)");
+        builder.setTitle("이동(변경좌석: " + floorNum + seatNum + "번)");
         builder.setMessage(displayTime() + "\n이동하시겠습니까?");
         builder.setCancelable(false);
         builder.setPositiveButton("예", (dialog, which) -> {
-            ReservatioFunction.moveSeat(rowName, rowIndex, floorNum, userDTO, seatDto);
+            ReservatioFunction.moveSeat(seatNum, floorNum, userDTO, seatDto);
             Toast.makeText(context, "이동이 완료되었습니다.", Toast.LENGTH_SHORT).show();
         });
         builder.setNegativeButton("아니요", (dialog, which) -> Toast.makeText(context, "이동 취소", Toast.LENGTH_SHORT).show());
@@ -107,38 +108,50 @@ public class ReserveDialog extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
     // 예약취소 다이얼로그
     public void returnDialog(final List<SeatDto>seatDto, final UserDTO userDTO){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("반납");
         builder.setMessage(displayTime()+"\n예약취소/반납하시겠습니까?");
-        builder.setNegativeButton("반납", (dialog, which) -> {
-            Toast.makeText(context, userDTO.getRowNames(), Integer.parseInt(userDTO.getRowIndex()+"번 자리가 반납되었습니다.")).show();
+        builder.setNegativeButton("예", (dialog, which) -> {
+            Toast.makeText(context,userDTO.getSeatNum()+"번 자리가 예약 취소/반납 되었습니다.",Toast.LENGTH_SHORT).show();
             ReservatioFunction.deleteInfo(userDTO);
         });
+        builder.setNegativeButton("아니요", (dialog, which) -> Toast.makeText(context,"취소되었습니다.",Toast.LENGTH_SHORT).show());
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
+
     // 좌석 그려주는 메소드
     private void seatSet() {
         for(int i=1; i<=90; i++){
-                Query query = databaseReference.child("Floor").child(i + Integer.toString(j) + "seat");
-                query.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        check = false;
-                        seatTest = snapshot.getValue(SeatDto.class);
-                        SeatDto seatDto = seatTest;
-                        Log.e("seatTest", String.valueOf(seatTest.getSeatNum());
+            Query query = databaseReference.child("Floor").child(i + "seat");
+            query.addValueEventListener(new ValueEventListener() {
 
-                    }
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    check = false;
+                    seatTest = snapshot.getValue(SeatDto.class);
+                    SeatDto seatDto = seatTest;
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Log.w("loadPost:onCancelled", error.toException());
-                    }
-                });
+                    if(count.size()>=90)
+                        count.set(seatTest.getSeatNum()-1, seatDto);
+                    else
+                        count.add(seatDto);
+                    Log.e("seatTest", String.valueOf(seatTest.getSeatNum()));
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Log.w("loadPost:onCancelled", error.toException());
+                }
+            });
             }
         }
-    }
+
 
     // 좌석 수 DB 생성
     private void dbCreate() {

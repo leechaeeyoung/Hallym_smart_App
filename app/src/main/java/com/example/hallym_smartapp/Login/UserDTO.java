@@ -12,8 +12,7 @@ public class UserDTO{
     private String pwd;
     private String name;
     private int floorNum;
-    private String rowNames;
-    private int rowIndex;
+    private int seatNum;
     private String reservationDate="";
     private String remainTime="";
     private boolean seatState=false;
@@ -49,17 +48,9 @@ public class UserDTO{
         this.name = name;
     }
 
-    public int getRowIndex() {
-        return rowIndex;
-    }
+    public int getSeatNum(){return seatNum;}
 
-    public void setRowIndex(int rowIndex) {
-        this.rowIndex = rowIndex;
-    }
-
-    public String getRowNames(){ return rowNames; }
-
-    public void setRowNames(String rowNames){ this.rowNames = rowNames; }
+    public void setSeatNum(int seatNum){ this.seatNum= seatNum; }
 
     public int getFloorNum() {
         return floorNum;
@@ -102,7 +93,7 @@ public class UserDTO{
         result.put("pwd",pwd);
         result.put("name",name);
         result.put("floorNum",floorNum);
-        result.put("rowNames",rowNames);
+        result.put("seatNum",seatNum);
         result.put("reservationDate",reservationDate);
         result.put("remainTime",remainTime);
         result.put("seatState",seatState);

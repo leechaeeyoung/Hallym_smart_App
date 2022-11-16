@@ -9,36 +9,29 @@ import java.util.Map;
 // 데이터 교환
 @IgnoreExtraProperties
 public class SeatDto {
-    private int rowIndex;
-    private char rowNames;
+    private int seatNum;
     private String userId = "";
     private boolean seatState = false;
     private String remainTime = "";
 
-    public SeatDto(char rowNames,int rowIndex) {
-        this.rowIndex = rowIndex;
-        this.rowNames = rowNames;
+    public SeatDto(int seatNum) {
+        this.seatNum=seatNum;
     }
 
-    public SeatDto(char rowNames, int rowIndex,String userId, boolean seatState, String remainTime) {
-        this.rowNames = rowNames;
-        this.rowIndex = rowIndex;
+    public SeatDto(int seatNum,String userId, boolean seatState, String remainTime) {
+        this.seatNum = seatNum;
         this.userId = userId;
         this.seatState = seatState;
         this.remainTime = remainTime;
     }
 
-    public char getRowNames() {
-        return rowNames;
+    public int getSeatNum() {
+        return seatNum;
     }
 
-    public void setRowNames(char rowNames) {
-        this.rowNames = rowNames;
+    public void setSeatNum(int seatNum) {
+        this.seatNum = seatNum;
     }
-
-    public int getRowIndex(){return rowIndex;}
-    
-    public void setRowIndex(int rowIndex){ this.rowIndex = rowIndex; }
 
     public String getUsedId() {
         return userId;
@@ -69,8 +62,7 @@ public class SeatDto {
     @Exclude
     public Map<String, Object> map(){
         HashMap<String,Object> result = new HashMap<>();
-        result.put("rowNames",rowNames);
-        result.put("rowIndex",rowIndex);
+        result.put("seatNum",seatNum);
         result.put("userId",userId);
         result.put("seatState",seatState);
         result.put("remainTime",remainTime);

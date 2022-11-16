@@ -119,8 +119,7 @@ public class ReserveDialog extends AppCompatActivity {
     }
     // 좌석 그려주는 메소드
     private void seatSet() {
-        for (char i = 'A'; i <= 'I'; i++) {
-            for (int j = 1; j <= 10; j++) {
+        for(int i=1; i<=90; i++){
                 Query query = databaseReference.child("Floor").child(i + Integer.toString(j) + "seat");
                 query.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -128,7 +127,7 @@ public class ReserveDialog extends AppCompatActivity {
                         check = false;
                         seatTest = snapshot.getValue(SeatDto.class);
                         SeatDto seatDto = seatTest;
-                        Log.e("seatTest", String.valueOf(seatTest.getRowNames()+seatTest.getRowIndex()));
+                        Log.e("seatTest", String.valueOf(seatTest.getSeatNum());
 
                     }
 
@@ -144,14 +143,13 @@ public class ReserveDialog extends AppCompatActivity {
     // 좌석 수 DB 생성
     private void dbCreate() {
         String key = databaseReference.child("floor").push().getKey();
-        for (char i = 'A'; i <= 'I'; i++) {
-            for (int j = 1; j <= 10; j++) {
-                SeatDto seat = new SeatDto(i, j);
+        for (int i=1; i<=90; i++) {
+                SeatDto seat = new SeatDto(i);
                 Map<String, Object> postValues = seat.map();
                 Map<String, Object> seatUpdates = new HashMap<>();
-                seatUpdates.put("/Floor/" + i + j + "seat", postValues);
+                seatUpdates.put("/Floor/" + i + "seat", postValues);
                 databaseReference.updateChildren(seatUpdates);
             }
         }
     }
-}
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:max="100"
+            android:progress="60"
+            android:progressTint="#95C8D9"
+            android:progressBackgroundTint="#DD1432" />
+
+        <TextView
+            android:id="@+id/seatNumber"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="00:00"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+    </RelativeLayout>
+
+</LinearLayout>

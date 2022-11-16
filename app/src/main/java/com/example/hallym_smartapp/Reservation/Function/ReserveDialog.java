@@ -47,7 +47,7 @@ public class ReserveDialog extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setTitle("3층 좌석");
         context = this;
-        setContentView(R.layout.three_floor);
+        setContentView(R.layout.third_floor);
         count = new ArrayList<>();
     }
 

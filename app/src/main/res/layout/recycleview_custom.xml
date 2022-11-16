@@ -22,13 +22,16 @@
 
         <TextView
             android:id="@+id/seatNumber"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="00:00"
-            android:layout_width="match_parent"
-            android:layout_height="25dp" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 </LinearLayout>

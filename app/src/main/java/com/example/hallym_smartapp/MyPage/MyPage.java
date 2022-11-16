@@ -75,7 +75,7 @@ public class MyPage extends AppCompatActivity {
                 myNameInfo.setText(userDTO.getName());
                 myIdInfo.setText(userDTO.getId());
                 // myseat에 좌석정보, 남은시간 뜨는 칸
-                todaySeat.setText(userDTO.getFloorNum()+"층 열람실 "+userDTO.getRowNames()+userDTO.getRowIndex());
+                todaySeat.setText(userDTO.getFloorNum()+"층 열람실 \n 좌석번호:"+userDTO.getSeatNum());
                 timerem.setText(userDTO.getRemainTime());
 
                 // 연장

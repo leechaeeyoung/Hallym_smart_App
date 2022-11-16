@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallym_smartapp.Login.UserDTO;
 import com.example.hallym_smartapp.R;
+import com.example.hallym_smartapp.Reservation.Function.ReserveDialog;
 import com.example.hallym_smartapp.Reservation.Function.SeatDto;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,7 +23,7 @@ public class CountAdapter {
     Context context;
     SeatDto seatDto1;
     UserDTO userDto;
-    ThreeFloorActivity threeFloor = new ThreeFloorActivity();
+    ReserveDialog threeFloor = new ReserveDialog();
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();

@@ -7,21 +7,21 @@ import java.util.List;
 
 public class ReservatioFunction {
     static SeatDao seatDao = new SeatDao();
-    public void reservationSeat(int floorNum, char rowName, int rowIndex, UserDTO userDTO, List<SeatDto> seatDto,String reservationTime){
+    public void reservationSeat(int floorNum, int seatNum, UserDTO userDTO, List<SeatDto> seatDto,String reservationTime){
         ReservationTimeSet reservationTimeSet = new ReservationTimeSet();
         seatDao.upCnt();
-        seatDao.updateSeat(rowName,rowIndex,reservationTime);
-        seatDao.updateUser(rowName,rowIndex,floorNum,userDTO,true,userDTO.getReservationDate(),userDTO.getRemainTime());
-
+        seatDao.updateSeat(seatNum,reservationTime);
+        seatDao.updateUser(seatNum,floorNum,userDTO,true,userDTO.getReservationDate(),userDTO.getRemainTime());
+        seatDto.get(seatNum).setSeatCheck(true); // 예약 완료된 좌석 붉은색으로변경
     }
-    public static void moveSeat(char rowName, int rowIndex, int floorNum, UserDTO userDTO, List<SeatDto> seatDto){
-        seatDao.emptySeat((char) userDTO.getRowIndex(),userDTO.getRowIndex());
-        seatDao.updateUser(rowName,rowIndex,floorNum,userDTO,true,userDTO.getReservationDate(),userDTO.getRemainTime());
-        seatDao.updateSeat(rowName,rowIndex,userDTO.getRemainTime());
+    public static void moveSeat(int seatNum, int floorNum, UserDTO userDTO, List<SeatDto> seatDto){
+        seatDao.emptySeat(seatNum);
+        seatDao.updateUser(seatNum,floorNum,userDTO,true,userDTO.getReservationDate(),userDTO.getRemainTime());
+        seatDao.updateSeat(seatNum,userDTO.getRemainTime());
     }
     public static void deleteInfo(UserDTO userDTO){
         seatDao.downCnt();
-        seatDao.emptySeat((char) userDTO.getRowIndex(),userDTO.getRowIndex());
+        seatDao.emptySeat(userDTO.getSeatNum());
         seatDao.updateUser(userDTO);
     }
     public void renew(UserDTO userDTO){

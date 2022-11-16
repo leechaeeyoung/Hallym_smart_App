@@ -22,17 +22,15 @@ public class SeatDao {
         userDTO.setReservationDate("");
         userDTO.setRemainTime("");
         userDTO.setFloorNum(0);
-        userDTO.setRowNames("");
-        userDTO.setRowIndex(0);
+        userDTO.setSeatNum(0);
         Map<String, Object> postValues = userDTO.map();
         HashMap<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("/User/"+loginId, postValues);
         databaseReference.updateChildren(childUpdates);
     }
     // 유저 정보 업데이트
-    public void updateUser(char rowName, int rowIndex, int floorNum, UserDTO userDTO,boolean seatState,String startTime,String remainTime){
-        userDTO.setRowNames(String.valueOf(rowName));
-        userDTO.setRowIndex(rowIndex);
+    public void updateUser(int seatNum, int floorNum, UserDTO userDTO,boolean seatState,String startTime,String remainTime){
+        userDTO.setSeatNum(seatNum);
         userDTO.setFloorNum(floorNum);
         userDTO.setSeatState(seatState);
         userDTO.setReservationDate(startTime);
@@ -51,22 +49,22 @@ public class SeatDao {
         databaseReference.updateChildren(childUpdates);
     }
     // 좌석 정보 업데이트
-    public void updateSeat(char rowName, int rowIndex, String startTime){
+    public void updateSeat(int seatNum, String startTime){
         String key = databaseReference.child("Floor").push().getKey();
-        SeatDto seatDB = new SeatDto(rowName,rowIndex,loginId, true,startTime);
+        SeatDto seatDB = new SeatDto(seatNum,loginId, true,startTime);
         Map<String, Object> postValues = seatDB.map();
         Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/Floor/"+rowName+rowIndex+"seat",postValues);
+        childUpdates.put("/Floor/"+seatNum+"seat",postValues);
         databaseReference.updateChildren(childUpdates);
     }
 
     // 빈좌석
-   public void emptySeat(char rowName, int rowIndex){
+   public void emptySeat(int seatNum){
         String key = databaseReference.child("Floor").push().getKey();
-        SeatDto seatDto = new SeatDto(rowName,rowIndex, "", false,"");
+        SeatDto seatDto = new SeatDto(seatNum, "", false,"");
         Map<String,Object> postValues = seatDto.map();
         Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/Floor/"+rowName+rowIndex+"seat",postValues);
+        childUpdates.put("/Floor/"+seatNum+"seat",postValues);
         databaseReference.updateChildren(childUpdates);
     }
     // 좌석 예약 완료 시 남은 좌석 down

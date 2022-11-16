@@ -53,12 +53,12 @@ public class MyPage extends AppCompatActivity {
         timerem = (TextView)findViewById(R.id.timerem);
         Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
 
-        logoutBt.setOnClickListener(v -> {
+/*        logoutBt.setOnClickListener(v -> {
             finish();
             Intent intent = new Intent(getApplicationContext(), ApiActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
-        });
+        });*/
     }
 
     // 사용자 개인정보 조회

@@ -100,7 +100,7 @@
                 android:background="#cccccc"
                 android:textColor="#000000"
                 android:text="확정"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:layout_marginRight="15dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
@@ -110,7 +110,7 @@
                 android:background="#cccccc"
                 android:textColor="#000000"
                 android:text="취소"
-                android:textSize="16dp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.hallym_smartapp.Reservation.Function;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import static com.example.hallym_smartapp.Reservation.Function.ReserveDialog.totalSeat;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -24,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 public class SeatList extends AppCompatActivity {
     Intent intent;
     LinearLayout list_3floor;
-    TextView nowSeat_3floor;
+    TextView thirdSeatNum;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -46,12 +47,13 @@ public class SeatList extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 SeatCnt seatCnt = snapshot.getValue(SeatCnt.class);
                 String nowCnt = seatCnt.getNowSeatCnt();
+                totalSeat = Integer.parseInt(seatCnt.getNowSeatCnt());
 
-                nowSeat_3floor = findViewById(R.id.thirdSeatNum);
-                nowSeat_3floor.setText(nowCnt);
+                thirdSeatNum = findViewById(R.id.thirdSeatNum);
+                thirdSeatNum.setText(nowCnt);
 
                 list_3floor.setOnClickListener(v -> {
-                    intent = new Intent(getApplicationContext(),SeatList.class);
+                    intent = new Intent(getApplicationContext(),ReserveDialog.class);
                     startActivity(intent);
                 });
             }

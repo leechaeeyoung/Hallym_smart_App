@@ -26,7 +26,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Reservation.Activity.ReservationActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,10 +35,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Splash" android:theme="@android:style/Theme.NoTitleBar" />
-        <activity android:name=".Reservation.Activity.ThirdFloorActivity"/>
+        <activity android:name=".Reservation.Activity.ReservationActivity"/>
         <activity android:name=".Reservation.Function.ReserveDialog"/>
         <activity android:name=".MyPage.MyPage"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".Api.ApiActivity"/>
+        <activity android:name=".Api.ImageActivity"/>
         <activity android:name=".Login.SignUp"/>
     </application>
 

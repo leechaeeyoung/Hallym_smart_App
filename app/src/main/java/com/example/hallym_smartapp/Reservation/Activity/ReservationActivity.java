@@ -56,7 +56,6 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.reservation_main);
 
         setTitle("좌석 현황");
-        setContentView(R.layout.reservation_main);
 
         list_3floor = findViewById(R.id.list_3floor);
         nowCnt();

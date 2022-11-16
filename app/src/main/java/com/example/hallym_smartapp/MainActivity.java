@@ -1,12 +1,19 @@
 package com.example.hallym_smartapp;
 
+import static com.example.hallym_smartapp.Login.LoginActivity.loginStatus;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hallym_smartapp.Api.ApiActivity;
+import com.example.hallym_smartapp.Login.LoginActivity;
 import com.example.hallym_smartapp.MyPage.MyPage;
 import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
 import com.example.hallym_smartapp.Reservation.Function.SeatCnt;
@@ -20,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference = firebaseDatabase.getReference();
 
-    Button Btn_Libraryreserve, Btn_myInfo;
+    Button Btn_Libraryreserve, Btn_myInfo, Btn_FindCampus;
     Intent intent;
 
     @SuppressLint("WrongViewCast")
@@ -32,9 +39,16 @@ public class MainActivity extends AppCompatActivity {
 
         Btn_Libraryreserve =findViewById(R.id.Btn_Libraryreserve);
         Btn_myInfo=findViewById(R.id.Btn_myInfo);
+        Btn_FindCampus =findViewById(R.id. Btn_FindCampus);
 
         Btn_Libraryreserve.setOnClickListener(v -> {
             intent = new Intent(getApplicationContext(), ReservationActivity.class);
+            startActivity(intent);
+        }); // 도서관 예약 클릭
+
+
+        Btn_FindCampus.setOnClickListener(v -> {
+            intent = new Intent(getApplicationContext(), ApiActivity.class);
             startActivity(intent);
         }); // 도서관 예약 클릭
 

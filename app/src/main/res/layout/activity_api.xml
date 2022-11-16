@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_clear"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="#0066B3"
+            android:textColor="#FFFFFF"
+            android:layout_margin="10dp"
+            android:text="상세보기"></Button>
+
+        <Button
+            android:id="@+id/bt_img"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="#00B6AD"
+            android:textColor="#FFFFFF"
+            android:layout_margin="10dp"
+            android:text="초기화"></Button>
+    </LinearLayout>
+</LinearLayout>
+

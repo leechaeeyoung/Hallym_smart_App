@@ -3,6 +3,7 @@ package com.example.hallym_smartapp.MyPage;
 import static com.example.hallym_smartapp.Login.LoginActivity.loginStatus;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -13,9 +14,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hallym_smartapp.Api.ApiActivity;
 import com.example.hallym_smartapp.Login.UserDTO;
 import com.example.hallym_smartapp.R;
-import com.example.hallym_smartapp.Reservation.Activity.ThirdFloorActivity;
 import com.google.errorprone.annotations.CompileTimeConstant;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,7 +30,7 @@ import java.util.Locale;
 import java.util.function.Function;
 
 public class MyPage extends AppCompatActivity {
-    Button Btn_myInfo,extendBt,cancelBt;
+    Button Btn_myInfo,extendBt,cancelBt,logoutBt;
     TextView myIdInfo,myNameInfo,todaySeat,timerem;
     public long mTimeLeft;
     public CountDownTimer mCountDown;
@@ -51,6 +52,13 @@ public class MyPage extends AppCompatActivity {
         todaySeat = (TextView)findViewById(R.id.todaySeat);
         timerem = (TextView)findViewById(R.id.timerem);
         Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
+
+        logoutBt.setOnClickListener(v -> {
+            finish();
+            Intent intent = new Intent(getApplicationContext(), ApiActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        });
     }
 
     // 사용자 개인정보 조회
@@ -75,7 +83,7 @@ public class MyPage extends AppCompatActivity {
                 myNameInfo.setText(userDTO.getName());
                 myIdInfo.setText(userDTO.getId());
                 // myseat에 좌석정보, 남은시간 뜨는 칸
-                todaySeat.setText(userDTO.getFloorNum()+"층 열람실 \n 좌석번호:"+userDTO.getSeatNum());
+                //todaySeat.setText(userDTO.getFloorNum()+"층 열람실 "+userDTO.getRowNames()+userDTO.getRowIndex());
                 timerem.setText(userDTO.getRemainTime());
 
                 // 연장
@@ -110,7 +118,7 @@ public class MyPage extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                ThirdFloorActivity thirdActivity = new ThirdFloorActivity();
+                //ThirdFloorActivity thirdActivity = new ThirdFloorActivity();
                 mTimeLeft=0;
                 timerCheck=false;
 //                thirdActivity.returnSeat(userDTO);

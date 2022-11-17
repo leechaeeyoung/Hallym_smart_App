@@ -145,6 +145,7 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
                 Log.w("loadPost:onCancelled", error.toException());
             }
         });
+    }
     // DB 좌석 정보
     public void seatDBSet(){
         SeatCnt seatCnt = new SeatCnt(Integer.toString(90));
@@ -152,6 +153,5 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         Map<String,Object> childUpdates = new HashMap<>();
         childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
         databaseReference.updateChildren(childUpdates);
-    }
     }
 }

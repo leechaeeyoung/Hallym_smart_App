@@ -116,7 +116,7 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
 
         });
 
-}
+    }
 
     @Override
     public int getItemCount() {

@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallym_smartapp.Login.UserDTO;
 import com.example.hallym_smartapp.MyPage.TimeConvert;
@@ -38,6 +39,11 @@ public class ReserveDialog extends AppCompatActivity {
     SeatDto seatTest;
     static Context context;
 
+    // 리사이클러뷰 추가
+    RecyclerView recyclerView;
+    // 리사클러뷰 어댑터 추가
+    SeatAdapter seatAdapter;
+
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
@@ -49,6 +55,24 @@ public class ReserveDialog extends AppCompatActivity {
         context = this;
         setContentView(R.layout.third_floor);
         count = new ArrayList<>();
+
+        initRecyclerView();
+    }
+
+    // 리사이클러뷰 초기화
+    private void initRecyclerView() {
+        recyclerView = findViewById(R.id.recyclerView);
+        seatAdapter = new SeatAdapter(new SeatAdapter.SeatDiffUtil());
+        recyclerView.setAdapter(seatAdapter);
+
+        // 테스트용 데이터 추가
+        ArrayList<String> textList = new ArrayList<>();
+        textList.add("0");
+        textList.add("1");
+        textList.add("2");
+        textList.add("3");
+        textList.add("4");
+        seatAdapter.submitList(textList);
     }
 
     protected void onPause() {
@@ -149,21 +173,22 @@ public class ReserveDialog extends AppCompatActivity {
                     Log.w("loadPost:onCancelled", error.toException());
                 }
             });
-            }
         }
+    }
 
 
     // 좌석 수 DB 생성
     private void dbCreate() {
         String key = databaseReference.child("floor").push().getKey();
         for (int i=1; i<=90; i++) {
-                SeatDto seat = new SeatDto(i);
-                Map<String, Object> postValues = seat.map();
-                Map<String, Object> seatUpdates = new HashMap<>();
-                seatUpdates.put("/Floor/" + i + "seat", postValues);
-                databaseReference.updateChildren(seatUpdates);
-            }
+            SeatDto seat = new SeatDto(i);
+            Map<String, Object> postValues = seat.map();
+            Map<String, Object> seatUpdates = new HashMap<>();
+            seatUpdates.put("/Floor/" + i + "seat", postValues);
+            databaseReference.updateChildren(seatUpdates);
         }
+    }
 
 }
+
 

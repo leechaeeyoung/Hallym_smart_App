@@ -21,7 +21,7 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_seat, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycleview_custom, parent, false);
         return new MyViewHolder(view);
     }
 

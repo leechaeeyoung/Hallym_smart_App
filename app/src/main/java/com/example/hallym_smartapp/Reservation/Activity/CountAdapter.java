@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallym_smartapp.Login.UserDTO;
@@ -58,9 +60,10 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
     }
 
 
+
     @Override
-    public CountAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.third_floor, viewGroup, false);
+    public CountAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycleview_custom, viewGroup, false);
         return new MyViewHolder(v);
     }
 
@@ -79,7 +82,7 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
 
         if (!seatCheck)
             myViewHolder.seatNumber.setBackgroundResource(R.drawable.available_seat);
-//
+
         if (seatCheck) {
             myViewHolder.seatNumber.setBackgroundResource(R.drawable.notavailable_seat);
 
@@ -126,12 +129,13 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView seatNumber;
-        ProgressBar progressBar;
+        TextView seatNumber;
+        ProgressBar pb;
 
-        public MyViewHolder(View itemView) {
+        public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             seatNumber = (TextView) itemView.findViewById(R.id.seatNumber);
+            pb = itemView.findViewById(R.id.pb);
         }
     }
 
@@ -200,7 +204,18 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
 
     }
 
+    // ListAdapter DiffUtil
+    public static class SeatInit extends DiffUtil.ItemCallback<String> {
+        @Override
+        public boolean areItemsTheSame(@NonNull String oldItem, @NonNull String newItem) {
+            return oldItem.equals(newItem);
+        }
 
+        @Override
+        public boolean areContentsTheSame(@NonNull String oldItem, @NonNull String newItem) {
+            return oldItem.equals(newItem);
+        }
+    }
 
     public String updateCountDownText(Long mTimeLeftInMillis1) {
         int hours = (int) (mTimeLeftInMillis1 / 3600000);

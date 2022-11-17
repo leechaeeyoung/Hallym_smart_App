@@ -67,3 +67,4 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
     }
 }
 
+

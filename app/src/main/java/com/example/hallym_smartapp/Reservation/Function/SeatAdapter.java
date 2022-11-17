@@ -1,5 +1,6 @@
 package com.example.hallym_smartapp.Reservation.Function;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +11,19 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hallym_smartapp.Login.UserDTO;
 import com.example.hallym_smartapp.R;
 
+import java.util.List;
+
 public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
+    List<SeatDto> seatDto;
+    Context context;
+    SeatDto seatDto1;
+    UserDTO userDto;
+    ReserveDialog room1 = new ReserveDialog();
+
+    final int floorNum = 3;
 
     public SeatAdapter(@NonNull DiffUtil.ItemCallback<String> diffCallback) {
         super(diffCallback);
@@ -34,16 +45,16 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
     static class MyViewHolder extends RecyclerView.ViewHolder {
 
         // 테스트용 텍스트뷰
-        private final AppCompatTextView tv_word;
+        private final AppCompatTextView seatNumber;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            tv_word = itemView.findViewById(R.id.tv_word);
+            seatNumber = itemView.findViewById(R.id.seatNumber);
         }
 
         private void bind(String word) {
-            tv_word.setText(word);
-            tv_word.setOnClickListener(new View.OnClickListener() {
+            seatNumber.setText(word);
+            seatNumber.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     System.out.println("좌석 클릭");

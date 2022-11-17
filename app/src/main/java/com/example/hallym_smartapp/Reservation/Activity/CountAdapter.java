@@ -60,7 +60,6 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
     }
 
     public CountAdapter() {
-
     }
 
 

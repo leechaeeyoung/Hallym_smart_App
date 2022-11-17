@@ -118,10 +118,10 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
             seatNumber.setOnClickListener(view -> System.out.println("좌석 클릭"));
         }
     }
-    @Override
-    public int getItemCount() {
-        return this.seatDto.size();
-    }
+//    @Override
+//    public int getItemCount() {
+//        return this.seatDto.size();
+//    }
 
     // ListAdapter DiffUtil
     public static class SeatDiffUtil extends DiffUtil.ItemCallback<String> {

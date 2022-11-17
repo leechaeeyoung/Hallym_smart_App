@@ -128,13 +128,14 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 SeatCnt seatCnt = snapshot.getValue(SeatCnt.class);
-                String nowCnt = seatCnt.getNowSeatCnt();
 
                 // 처음 실행 시, ValueEventListener 이벤트가 발생하기에
                 // seatCnt null 처리
-                if(seatCnt==null){
+                if(seatCnt == null) {
                     return;
                 }
+
+                String nowCnt = seatCnt.getNowSeatCnt();
                 totalSeat = Integer.parseInt(seatCnt.getNowSeatCnt());
 
                 thirdSeatNum = findViewById(R.id.thirdSeatNum);
@@ -161,3 +162,7 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         databaseReference.updateChildren(childUpdates);
     }
 }
+
+
+
+

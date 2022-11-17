@@ -53,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
         }); // 도서관 예약 클릭
 
         Btn_myInfo.setOnClickListener(v -> {
-                intent = new Intent(getApplicationContext(), MyPage.class);
-                startActivity(intent);
+            intent = new Intent(getApplicationContext(), MyPage.class);
+            startActivity(intent);
         }); // 마이 페이지 클릭
     }
     public void onBackPressed(){}
-    
+
     //DB에 좌석수 정보 set
     public void seatCntDB(){
         SeatCnt seatCnt = new SeatCnt(Integer.toString(90));

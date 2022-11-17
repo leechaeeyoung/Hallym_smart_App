@@ -25,7 +25,7 @@ public class Fragment2 extends Fragment {
     public Fragment2(){
     }
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedI){
-        return inflater.inflate(R.layout.three_floor, container,false);
+        return inflater.inflate(R.layout.third_floor, container,false);
     }
 
     @Override

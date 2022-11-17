@@ -59,10 +59,13 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
         this.context = c;
     }
 
+    public CountAdapter() {
+
+    }
 
 
     @Override
-    public CountAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycleview_custom, viewGroup, false);
         return new MyViewHolder(v);
     }

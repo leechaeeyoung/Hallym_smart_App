@@ -35,13 +35,7 @@ import java.util.Locale;
 import java.util.function.Function;
 
 public class MyPage extends AppCompatActivity {
-    Button Btn_myInfo,logoutBt;
     TextView myIdInfo,myNameInfo;
-    public long mTimeLeft;
-    public CountDownTimer mCountDown;
-    public static String remainTimes;
-    public boolean timerCheck = false;
-    boolean flag = false;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -53,6 +47,9 @@ public class MyPage extends AppCompatActivity {
         setTitle("마이페이지");
         myIdInfo = (TextView)findViewById(R.id.myNameInfo);
         myNameInfo = (TextView)findViewById(R.id.myNameInfo);
+
+        if(loginStatus)
+            userDetail(loginId);
 
 /*        logoutBt.setOnClickListener(v -> {
             finish();

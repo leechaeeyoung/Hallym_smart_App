@@ -33,8 +33,8 @@ import java.util.Locale;
 import java.util.function.Function;
 
 public class MyPage extends AppCompatActivity {
-    Button Btn_myInfo,extendBt,cancelBt,logoutBt;
-    TextView myIdInfo,myNameInfo,todaySeat,timerem;
+    Button Btn_myInfo,logoutBt;
+    TextView myIdInfo,myNameInfo;
     public long mTimeLeft;
     public CountDownTimer mCountDown;
     public static String remainTimes;
@@ -53,8 +53,6 @@ public class MyPage extends AppCompatActivity {
         setTitle("마이페이지");
         myIdInfo = (TextView)findViewById(R.id.myNameInfo);
         myNameInfo = (TextView)findViewById(R.id.myNameInfo);
-        todaySeat = (TextView)findViewById(R.id.todaySeat);
-        timerem = (TextView)findViewById(R.id.timerem);
         Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
 
 /*        logoutBt.setOnClickListener(v -> {
@@ -72,32 +70,9 @@ public class MyPage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 final UserDTO userDTO = snapshot.getValue(UserDTO.class);
-                if(userDTO.isSeatState()){
-                    // 예약 테스트 코드
-                    TimeConvert timeConvert=new TimeConvert(userDTO.getRemainTime());
-                    mTimeLeft = timeConvert.getDiff();
-                    Log.e("강한림",Long.toString(mTimeLeft));
-                    startTimer(userDTO);
-                    flag=true;
-
-                } else if(timerCheck){
-                    pauseTimer();
-                }
                 // mypage에 학번, 이름뜨는 칸
                 myNameInfo.setText(userDTO.getName());
                 myIdInfo.setText(userDTO.getId());
-                // myseat에 좌석정보, 남은시간 뜨는 칸
-                todaySeat.setText(userDTO.getFloorNum()+"층 열람실 "+userDTO.getSeatNum()+"번 자리");
-                timerem.setText(userDTO.getRemainTime());
-
-                // 연장
-                extendBt.setOnClickListener(v -> {
-                    ReservatioFunction function = new ReservatioFunction();
-                    pauseTimer();
-                    function.renew(userDTO);
-                });
-                if (loginStatus)
-                    userDetail(loginId);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -105,39 +80,4 @@ public class MyPage extends AppCompatActivity {
             }
         });
     }
-
-    private void startTimer(UserDTO userDTO) {
-        this.userDTO = userDTO;
-        mCountDown = new CountDownTimer(mTimeLeft, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                mTimeLeft=millisUntilFinished;
-                updateCountDownText();
-            }
-
-            @Override
-            public void onFinish() {
-                ReservatioFunction function = new ReservatioFunction();
-                //ThirdFloorActivity thirdActivity = new ThirdFloorActivity();
-                mTimeLeft=0;
-                timerCheck=false;
-//                thirdActivity.returnSeat(userDTO);
-                function.deleteInfo(userDTO);
-            }
-        }.start();
-        timerCheck=true;
-    }
-    private void pauseTimer() {
-        mCountDown.cancel();
-        timerCheck=false;
-    }
-    private void updateCountDownText() {
-        int hours = (int) (mTimeLeft/ 3600000);
-        int minutes = (int) (mTimeLeft % 3600000) / 60000;
-        int seconds = (int) ((mTimeLeft % 3600000) % 60000) / 1000;
-
-        String timeLeftFormatted = String.format(Locale.getDefault(), "%02d 시간 %02d 분 %02d 초", hours, minutes, seconds);
-        timerem.setText(timeLeftFormatted);
-    }
-
 }

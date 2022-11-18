@@ -18,7 +18,7 @@
 
         <Button
             android:id="@+id/bt_clear"
-            android:layout_width="175dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:background="#0066B3"
             android:textColor="#FFFFFF"
@@ -27,7 +27,7 @@
 
         <Button
             android:id="@+id/bt_img"
-            android:layout_width="175dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
             android:background="#00B6AD"
             android:textColor="#FFFFFF"

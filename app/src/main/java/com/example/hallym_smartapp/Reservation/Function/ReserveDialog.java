@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallym_smartapp.Login.UserDTO;
@@ -32,12 +33,14 @@ import java.util.Map;
 public class ReserveDialog extends AppCompatActivity {
     Long now;
     Date date;
-    List<SeatDto> count = new ArrayList<SeatDto>();
+    List<SeatDto> count = new ArrayList<>();
+    GridLayoutManager layout;
     static boolean check = false;
     static boolean flag = true;
     public static int totalSeat = 0;
     SeatDto seatTest;
     static Context context;
+    ReservatioFunction function = new ReservatioFunction();
 
     // 리사이클러뷰 추가
     RecyclerView recyclerView;
@@ -66,13 +69,20 @@ public class ReserveDialog extends AppCompatActivity {
         recyclerView.setAdapter(seatAdapter);
 
         // 테스트용 데이터 추가
-        ArrayList<String> textList = new ArrayList<>();
-        textList.add("0");
-        textList.add("1");
-        textList.add("2");
-        textList.add("3");
-        textList.add("4");
-        seatAdapter.submitList(textList);
+//        ArrayList<String> textList = new ArrayList<>();
+//        textList.add("0");
+//        textList.add("1");
+//        textList.add("2");
+//        textList.add("3");
+//        textList.add("4");
+//        seatAdapter.submitList(textList);
+        layout = new GridLayoutManager(this, 5);
+        recyclerView.setLayoutManager(layout);
+
+        count = new ArrayList<>();
+        seatSet();
+        dbCreate();
+
     }
 
     protected void onPause() {

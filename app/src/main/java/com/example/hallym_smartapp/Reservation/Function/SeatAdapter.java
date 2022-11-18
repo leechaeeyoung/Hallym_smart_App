@@ -73,7 +73,7 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
             holder.seatNumber.setBackgroundResource(R.drawable.available_seat);
 
         if (seatCheck) {
-            holder.seatNumber.setBackgroundResource(R.drawable.notavailable_seat);
+            holder.seatNumber.setBackgroundResource(R.drawable.not_available_seat);
         } // 이미지
 
         holder.seatNumber.setOnClickListener(v -> {
@@ -103,8 +103,8 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
 
 
     // 아이템에 해당하는 뷰 홀더
-    static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView seatNumber;
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView seatNumber;
         ProgressBar pb;
 
 //         // 테스트용 텍스트뷰

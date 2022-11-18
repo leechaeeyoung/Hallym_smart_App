@@ -18,7 +18,7 @@ public class TimeConvert {
     public TimeConvert(String date) {
         String reqDateString = date;
 
-        Date currenDate = new Date();
+        Date currentDate = new Date();
         SimpleDateFormat dateFormat=new SimpleDateFormat("MM월 dd일 HH시 mm분 ss초");
         this.reqDate = null;
 
@@ -28,7 +28,14 @@ public class TimeConvert {
         } catch (ParseException e){
             e.printStackTrace();
         }
-        this.currentTime = currenDate.getTime();
+        this.currentTime = currentDate.getTime();
+
+        //시, 분, 초로 표현
+        this.diff = reqTime - currentTime;
+        Log.e("test time",String.valueOf(diff));
+        this.hour = diff / 3600000;
+        this.min = (diff % 3600000) / 60000;
+        this.second = ((diff % 3600000) % 60000) / 1000;
 
         this.diff = reqTime - currentTime;
         Log.e("test",String.valueOf(diff));
@@ -37,7 +44,7 @@ public class TimeConvert {
         this.second = ((diff%3600000)%60000)/1000;
     }
     public long getDiff(){
-        Log.e("시간값",Long.toString(diff));
+        Log.e("시간: ",Long.toString(diff));
         return diff;
     }
     public long getHour(){

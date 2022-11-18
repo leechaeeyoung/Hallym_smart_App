@@ -1,5 +1,6 @@
 package com.example.hallym_smartapp.MyPage;
 
+import static com.example.hallym_smartapp.Login.LoginActivity.loginId;
 import static com.example.hallym_smartapp.Login.LoginActivity.loginStatus;
 
 import android.annotation.SuppressLint;
@@ -17,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.hallym_smartapp.Api.ApiActivity;
 import com.example.hallym_smartapp.Login.UserDTO;
 import com.example.hallym_smartapp.R;
+import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
+import com.example.hallym_smartapp.Reservation.Function.ReservatioFunction;
 import com.google.errorprone.annotations.CompileTimeConstant;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -40,6 +43,7 @@ public class MyPage extends AppCompatActivity {
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    private UserDTO userDTO;
 
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,19 +87,18 @@ public class MyPage extends AppCompatActivity {
                 myNameInfo.setText(userDTO.getName());
                 myIdInfo.setText(userDTO.getId());
                 // myseat에 좌석정보, 남은시간 뜨는 칸
-                //todaySeat.setText(userDTO.getFloorNum()+"층 열람실 "+userDTO.getRowNames()+userDTO.getRowIndex());
+                todaySeat.setText(userDTO.getFloorNum()+"층 열람실 "+userDTO.getSeatNum()+"번 자리");
                 timerem.setText(userDTO.getRemainTime());
 
                 // 연장
-                extendBt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        pauseTimer();
-                        //dao 설정
-                    }
+                extendBt.setOnClickListener(v -> {
+                    ReservatioFunction function = new ReservatioFunction();
+                    pauseTimer();
+                    function.renew(userDTO);
                 });
+                if (loginStatus)
+                    userDetail(loginId);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Log.w("loadPost:onCancel", error.toException());
@@ -103,12 +106,8 @@ public class MyPage extends AppCompatActivity {
         });
     }
 
-    private void pauseTimer() {
-        mCountDown.cancel();
-        timerCheck=false;
-    }
-
     private void startTimer(UserDTO userDTO) {
+        this.userDTO = userDTO;
         mCountDown = new CountDownTimer(mTimeLeft, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -118,15 +117,20 @@ public class MyPage extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                ReservatioFunction function = new ReservatioFunction();
                 //ThirdFloorActivity thirdActivity = new ThirdFloorActivity();
                 mTimeLeft=0;
                 timerCheck=false;
 //                thirdActivity.returnSeat(userDTO);
+                function.deleteInfo(userDTO);
             }
         }.start();
         timerCheck=true;
     }
-
+    private void pauseTimer() {
+        mCountDown.cancel();
+        timerCheck=false;
+    }
     private void updateCountDownText() {
         int hours = (int) (mTimeLeft/ 3600000);
         int minutes = (int) (mTimeLeft % 3600000) / 60000;

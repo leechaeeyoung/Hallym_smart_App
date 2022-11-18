@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -9,16 +9,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ProgressBar
             android:id="@+id/pb"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:max="100"
             android:progress="60"
-            android:progressTint="#95C8D9"
-            android:progressBackgroundTint="#DD1432" />
+            android:progressBackgroundTint="@drawable/available_seat"
+            android:progressTint="@drawable/not_available_seat" />
 
         <TextView
             android:id="@+id/seatNumber"
@@ -29,7 +33,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="00"
+            tools:text="0"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </RelativeLayout>

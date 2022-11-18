@@ -86,7 +86,7 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
             myViewHolder.seatNumber.setBackgroundResource(R.drawable.available_seat);
 
         if (seatCheck) {
-            myViewHolder.seatNumber.setBackgroundResource(R.drawable.notavailable_seat);
+            myViewHolder.seatNumber.setBackgroundResource(R.drawable.not_available_seat);
 
         } // 이미지
 

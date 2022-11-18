@@ -153,14 +153,14 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
             }
         });
     }
-    // DB 좌석 정보
-    public void seatDBSet(){
-        SeatCnt seatCnt = new SeatCnt(Integer.toString(90));
-        Map<String, Object> postValues = seatCnt.map();
-        Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
-        databaseReference.updateChildren(childUpdates);
-    }
+//    // DB 좌석 정보
+//    public void seatDBSet(){
+//        SeatCnt seatCnt = new SeatCnt(Integer.toString(90));
+//        Map<String, Object> postValues = seatCnt.map();
+//        Map<String,Object> childUpdates = new HashMap<>();
+//        childUpdates.put("/seat_cnt/"+"nowSeatCnt",postValues);
+//        databaseReference.updateChildren(childUpdates);
+//    }
 }
 
 

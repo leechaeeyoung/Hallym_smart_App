@@ -49,22 +49,22 @@ public class SeatDao {
         databaseReference.updateChildren(childUpdates);
     }
     // 좌석 정보 업데이트
-    public void updateSeat(int seatNum, String startTime){
+    public void updateSeat(int floorNum, int seatNum, String startTime){
         String key = databaseReference.child("Floor").push().getKey();
         SeatDto seatDB = new SeatDto(seatNum,loginId, true,startTime);
         Map<String, Object> postValues = seatDB.map();
         Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/Floor/"+seatNum+"seat",postValues);
+        childUpdates.put("/Floor/"+"3floor"+floorNum+seatNum+"seat",postValues);
         databaseReference.updateChildren(childUpdates);
     }
 
     // 빈좌석
-   public void emptySeat(int seatNum){
+   public void emptySeat(int floorNum, int seatNum){
         String key = databaseReference.child("Floor").push().getKey();
         SeatDto seatDto = new SeatDto(seatNum, "", false,"");
         Map<String,Object> postValues = seatDto.map();
         Map<String,Object> childUpdates = new HashMap<>();
-        childUpdates.put("/Floor/"+seatNum+"seat",postValues);
+        childUpdates.put("/Floor/"+"3floor"+floorNum+seatNum+"seat",postValues);
         databaseReference.updateChildren(childUpdates);
     }
     // 좌석 예약 완료 시 남은 좌석 down

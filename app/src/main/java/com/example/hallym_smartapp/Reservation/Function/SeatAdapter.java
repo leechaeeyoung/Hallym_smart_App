@@ -5,6 +5,7 @@ import static com.example.hallym_smartapp.Login.LoginActivity.loginStatus;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,11 +37,14 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
     Context context;
     SeatDto seatDto1;
     UserDTO userDto;
-    ReserveDialog room1 = new ReserveDialog();
+    ReserveDialog third = new ReserveDialog();
 
     public static long timeValue;
+    public static CountDownTimer countDownTimer;
 
     final int floorNum = 3;
+    boolean timerCheck = false;
+    long mTimeLeft;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -69,30 +73,23 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
 
         holder.seatNumber.setText("" + seatNum);
 
-        if (!seatCheck)
+        if (!seatCheck)  // 예약가능
             holder.seatNumber.setBackgroundResource(R.drawable.available_seat);
 
-        if (seatCheck) {
+        if (seatCheck) { // 예약 불가능
             holder.seatNumber.setBackgroundResource(R.drawable.not_available_seat);
         } // 이미지
 
+        // 좌석 클릭 시 이벤트
         holder.seatNumber.setOnClickListener(v -> {
             Log.e("test", Integer.toString(position));
             if (!seatCheck) { // 선택한 좌석이 비어 있있다면
-
-                if (userDto.isSeatState()) {   // 사용자가 다른 자리에 이미 예약되어 있다면
-
-                    room1.moveDialog(position, floorNum, userDto, seatDto);   // 자리 이동 다이얼로그 호출
-
-                } else
-
-                    room1.reservationDialog(position, floorNum, userDto, seatDto);    // 자리 예약 다이얼로그 호출
-
+                third.reservationDialog(floorNum, seatNum, userDto, seatDto); // 자리 예약 다이얼로그 호출
             } else {
 
-                if (userDto.getSeatNum() == (position + 1))     // 선택한 자리가 본인 자리라면
+                if (userDto.getSeatNum() == (position + 1)) // 선택한 자리가 본인 자리라면
 
-                    room1.cancelDialog(seatDto, userDto);                 // 자리 반환 다이얼로그 호출
+                    third.cancelDialog(seatDto, userDto);   // 자리 반환 다이얼로그 호출
 
                 else
 

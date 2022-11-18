@@ -91,7 +91,7 @@ public class ReserveDialog extends AppCompatActivity {
         Log.e("pauseTest", "test");
     }
 
-    private String reservationDate() {
+    private String reservationTime() {
         SimpleDateFormat format = new SimpleDateFormat(" mm월 dd일  HH시 mm분 ss초");
         now = System.currentTimeMillis();
         date = new Date(now);
@@ -106,12 +106,12 @@ public class ReserveDialog extends AppCompatActivity {
     }
 
     // 예약 다이얼로그
-    public void reservationDialog(final int seatNum, final int floorNum, final UserDTO userDTO, final List<SeatDto> seatDto){
+    public void reservationDialog(final int floorNum,final int seatNum, final UserDTO userDTO, final List<SeatDto> seatDto){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("예약(현재좌석: "+seatNum+"\n예약하시겠습니까?").setCancelable(false).setPositiveButton("예", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                ReservatioFunction.moveSeat(seatNum, floorNum, userDTO, seatDto);
+                ReservatioFunction.reservationSeat(seatNum, floorNum, userDTO, seatDto,reservationTime());
                 Toast.makeText(context,seatNum+"번 자리가 예약되었습니다.", Toast.LENGTH_SHORT).show();
                 TimeConvert timeConvert = new TimeConvert(userDTO.getRemainTime());
                 Long timeValue = timeConvert.getDiff();

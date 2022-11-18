@@ -9,7 +9,7 @@ import java.util.List;
 public class ReservatioFunction {
     static SeatDao seatDao = new SeatDao();
 
-    public void reservationSeat(int floorNum, int seatNum, UserDTO userDTO, List<SeatDto> seatDto,String reservationTime){
+    public static void reservationSeat(int floorNum, int seatNum, UserDTO userDTO, List<SeatDto> seatDto, String reservationTime){
         Timeadd timeadd = new Timeadd();
         seatDao.upCnt();
         seatDao.updateSeat(floorNum,seatNum,reservationTime);

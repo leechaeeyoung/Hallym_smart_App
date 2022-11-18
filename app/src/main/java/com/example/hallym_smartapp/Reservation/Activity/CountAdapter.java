@@ -44,8 +44,6 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
 
     public static long timeValue;
     public static CountDownTimer mCountDownTimer1;
-
-    boolean timerCheck = false;
     long mTimeLeft;
 
     final int floorNum = 3;
@@ -98,12 +96,6 @@ public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyViewHolder
                 Log.e("test", Integer.toString(seat));
 
                 if (!seatCheck) { // 선택한 좌석이 비어 있있다면
-
-                    if (userDto.isSeatState()) {   // 사용자가 다른 자리에 이미 예약되어 있다면
-
-                        room1.moveDialog(seat, floorNum, userDto, seatDto);   // 자리 이동 다이얼로그 호출
-
-                    } else
 
                         room1.reservationDialog(seat, floorNum, userDto, seatDto);    // 자리 예약 다이얼로그 호출
 

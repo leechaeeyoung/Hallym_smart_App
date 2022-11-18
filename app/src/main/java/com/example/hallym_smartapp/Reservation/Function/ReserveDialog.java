@@ -127,22 +127,6 @@ public class ReserveDialog extends AppCompatActivity {
         alertDialog.show();
     }
 
-    // 이동 다이얼로그
-    public void moveDialog(final int seatNum, final int floorNum, final UserDTO userDTO, final List<SeatDto> seatDto) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("이동(변경좌석: " + floorNum + seatNum + "번)");
-        builder.setMessage(displayTime() + "\n이동하시겠습니까?");
-        builder.setCancelable(false);
-        builder.setPositiveButton("예", (dialog, which) -> {
-            ReservatioFunction.moveSeat(seatNum, floorNum, userDTO, seatDto);
-            Toast.makeText(context, "이동이 완료되었습니다.", Toast.LENGTH_SHORT).show();
-        });
-        builder.setNegativeButton("아니요", (dialog, which) -> Toast.makeText(context, "이동 취소", Toast.LENGTH_SHORT).show());
-
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-    }
-
     // 예약취소 다이얼로그
     public void cancelDialog(final List<SeatDto>seatDto, final UserDTO userDTO){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);

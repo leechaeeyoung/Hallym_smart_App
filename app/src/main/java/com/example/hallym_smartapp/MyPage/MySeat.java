@@ -87,7 +87,6 @@ public class MySeat extends AppCompatActivity {
                     ReservatioFunction function = new ReservatioFunction();
                     pauseTimer();
                     function.renew(userDTO);
-
                 });
             }
             @Override

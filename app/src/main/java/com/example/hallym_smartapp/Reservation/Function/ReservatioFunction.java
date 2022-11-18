@@ -16,19 +16,14 @@ public class ReservatioFunction {
         seatDao.updateUser(seatNum,floorNum,userDTO,true,userDTO.getReservationDate(),userDTO.getRemainTime());
         seatDto.get(seatNum).setSeatCheck(true); // 예약 완료된 좌석 붉은색으로변경
     }
-    public static void moveSeat(int seatNum, int floorNum, UserDTO userDTO, List<SeatDto> seatDto){
-        seatDao.emptySeat(floorNum,seatNum);
-        seatDao.updateUser(seatNum,floorNum,userDTO,true,userDTO.getReservationDate(),userDTO.getRemainTime());
-        seatDao.updateSeat(floorNum,seatNum,userDTO.getRemainTime());
-    }
     public static void deleteInfo(UserDTO userDTO){
         seatDao.downCnt();
         seatDao.emptySeat(userDTO.getFloorNum(), userDTO.getSeatNum());
         seatDao.updateUser(userDTO);
     }
     public void renew(UserDTO userDTO){
-        Timeadd reservationTimeSet = new Timeadd();
-        String result = reservationTimeSet.renew(userDTO.getRemainTime());
+        Timeadd timeadd = new Timeadd();
+        String result = timeadd.renew(userDTO.getRemainTime());
         seatDao.updateUser(userDTO,result);
     }
 }

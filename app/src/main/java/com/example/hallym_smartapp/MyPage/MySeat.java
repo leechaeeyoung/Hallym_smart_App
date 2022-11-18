@@ -49,12 +49,12 @@ public class MySeat extends AppCompatActivity {
         cancelBt = (Button) findViewById(R.id.cancelBt);
     }
 
-        public void userDetail(String id){
-            Query query = databaseReference.child("User").child(id);
-            query.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    final UserDTO userDTO = snapshot.getValue(UserDTO.class);
+    public void userDetail(String id){
+        Query query = databaseReference.child("User").child(id);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                final UserDTO userDTO = snapshot.getValue(UserDTO.class);
                 if(userDTO.isSeatState()){
                     // 예약 테스트 코드
                     TimeConvert timeConvert=new TimeConvert(userDTO.getRemainTime());
@@ -89,13 +89,13 @@ public class MySeat extends AppCompatActivity {
                     function.renew(userDTO);
 
                 });
-                }
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                    Log.w("loadPost:onCancel", error.toException());
-                }
-            });
-        }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.w("loadPost:onCancel", error.toException());
+            }
+        });
+    }
     private void startTimer(UserDTO userDTO) {
         this.userDTO = userDTO;
         mCountDown = new CountDownTimer(mTimeLeft, 1000) {

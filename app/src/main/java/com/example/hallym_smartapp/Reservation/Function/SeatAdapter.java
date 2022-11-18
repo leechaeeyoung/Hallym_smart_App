@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallym_smartapp.Login.UserDTO;
+import com.example.hallym_smartapp.MyPage.TimeConvert;
 import com.example.hallym_smartapp.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +37,8 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
     SeatDto seatDto1;
     UserDTO userDto;
     ReserveDialog room1 = new ReserveDialog();
+
+    public static long timeValue;
 
     final int floorNum = 3;
 
@@ -54,12 +57,12 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.bind(getItem(position));
-        if (loginStatus)
-            userReservationCheck(loginId);
 
-        final AppCompatTextView seatNumber;
+        if (loginStatus)
+            idReservationCheck(loginId);
+
         final int seatNum = seatDto.get(position).getSeatNum();
         final String userId = seatDto.get(position).getUsedId();
         final boolean seatCheck = seatDto.get(position).isSeatCheck();
@@ -118,10 +121,11 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
             seatNumber.setOnClickListener(view -> System.out.println("좌석 클릭"));
         }
     }
-//    @Override
-//    public int getItemCount() {
-//        return this.seatDto.size();
-//    }
+
+    @Override
+    public int getItemCount() {
+        return this.seatDto.size();
+    }
 
     // ListAdapter DiffUtil
     public static class SeatDiffUtil extends DiffUtil.ItemCallback<String> {
@@ -135,7 +139,8 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
             return oldItem.equals(newItem);
         }
     }
-    public synchronized void userReservationCheck(String id) {
+
+    public synchronized void idReservationCheck(String id) {
         Log.d("DBUG", "check");
 
         Query query = databaseReference.child("User").child(id);
@@ -152,6 +157,29 @@ public class SeatAdapter extends ListAdapter<String, SeatAdapter.MyViewHolder> {
                 Log.d("DBUG", "cancelled");
             }
         });
+    }
+    public  void userReservationCheck1(final int position) {
+
+        Log.d("input id", Integer.toString(position));
+
+        Query query = databaseReference.child("Room").child(Integer.toString(position + 1) + "seat");
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("DBUG1", "success");
+                seatDto1 = dataSnapshot.getValue(SeatDto.class);
+                Log.e("시간", "dddddd"+seatDto1.getRemainTime());
+                TimeConvert timeConvert = new TimeConvert(seatDto1.getRemainTime());
+                timeValue = timeConvert.getDiff();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 }
 

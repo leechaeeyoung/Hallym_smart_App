@@ -21,6 +21,8 @@ import com.example.hallym_smartapp.R;
 import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
 import com.example.hallym_smartapp.Reservation.Function.ReservatioFunction;
 import com.google.errorprone.annotations.CompileTimeConstant;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -43,9 +45,7 @@ public class MyPage extends AppCompatActivity {
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
-    private UserDTO userDTO;
 
-    @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage);
@@ -53,7 +53,6 @@ public class MyPage extends AppCompatActivity {
         setTitle("마이페이지");
         myIdInfo = (TextView)findViewById(R.id.myNameInfo);
         myNameInfo = (TextView)findViewById(R.id.myNameInfo);
-        Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
 
 /*        logoutBt.setOnClickListener(v -> {
             finish();

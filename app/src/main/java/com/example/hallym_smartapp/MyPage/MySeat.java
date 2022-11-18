@@ -3,8 +3,10 @@ package com.example.hallym_smartapp.MyPage;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Locale;
+import java.util.logging.FileHandler;
 
 public class MySeat extends AppCompatActivity {
     TextView todaySeat,timerem;
@@ -42,6 +45,8 @@ public class MySeat extends AppCompatActivity {
 
         todaySeat = (TextView) findViewById(R.id.todaySeat);
         timerem = (TextView) findViewById(R.id.timerem);
+        extendBt = (Button) findViewById(R.id.extendBt);
+        cancelBt = (Button) findViewById(R.id.cancelBt);
     }
 
         public void userDetail(String id){
@@ -66,13 +71,24 @@ public class MySeat extends AppCompatActivity {
                 todaySeat.setText(userDTO.getFloorNum()+"층 열람실 "+userDTO.getSeatNum()+"번 자리");
                 timerem.setText(userDTO.getRemainTime());
 
+                // 예약 취소
+                cancelBt.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mCountDown.cancel();
+                        Toast.makeText(getApplication(), (userDTO.getSeatNum())+"번 자리가 취소되었습니다.", Toast.LENGTH_SHORT).show();
+                        ReservatioFunction function = new ReservatioFunction();
+                        function.deleteInfo(userDTO);
+                    }
+                });
+
                 // 연장
                 extendBt.setOnClickListener(v -> {
                     ReservatioFunction function = new ReservatioFunction();
                     pauseTimer();
                     function.renew(userDTO);
-                });
 
+                });
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {

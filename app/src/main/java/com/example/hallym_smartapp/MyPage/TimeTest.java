@@ -14,9 +14,9 @@ public class TimeTest {
     long mTimeLeft;
     CountDownTimer mCountDown;
     Context context;
-    SeatAdapter.SeatViewHolder holder;
+    SeatAdapter.MyViewHolder holder;
 
-    public TimeTest(SeatAdapter.SeatViewHolder holder, Context context, long mTimeLeft){
+    public TimeTest(SeatAdapter.MyViewHolder holder, Context context, long mTimeLeft){
         this.holder= holder;
         this.context = context;
         this.mTimeLeft = mTimeLeft;
@@ -48,7 +48,7 @@ public class TimeTest {
     }
 
 
-    public void updateCountDownText(SeatAdapter.SeatViewHolder holder) {
+    public void updateCountDownText(SeatAdapter.MyViewHolder holder) {
         int hours = (int) (mTimeLeft / 3600000);
         int minutes = (int) (mTimeLeft % 3600000) / 60000;
         int seconds = (int) ((mTimeLeft % 3600000) % 60000) / 1000;

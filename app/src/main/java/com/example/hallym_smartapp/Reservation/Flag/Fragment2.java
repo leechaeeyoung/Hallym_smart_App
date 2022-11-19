@@ -47,12 +47,5 @@ public class Fragment2 extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layout);
         recyclerView.setAdapter(seatAdapter);
-
-        // 테스트용 데이터 추가
-        ArrayList<String> textList = new ArrayList<>();
-        for(int i=1; i<=90; i++) {
-            textList.add(String.valueOf(i));
-        }
-        seatAdapter.submitList(textList);
     }
 }

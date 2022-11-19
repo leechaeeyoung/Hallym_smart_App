@@ -58,34 +58,22 @@ public class ReserveDialog extends AppCompatActivity {
         context = this;
         setContentView(R.layout.third_floor);
         count = new ArrayList<>();
-        layout = new GridLayoutManager(this,5);
-        recyclerView = findViewById(R.id.recyclerView);
-        seatSet();
-        dbCreate();
-//        initRecyclerView();
+
+        initRecyclerView();
     }
 
-//    // 리사이클러뷰 초기화
-//    private void initRecyclerView() {
-//        recyclerView = findViewById(R.id.recyclerView);
-//        seatAdapter = new SeatAdapter(new SeatAdapter.SeatDiffUtil());
-//        recyclerView.setAdapter(seatAdapter);
-//
-//        // 테스트용 데이터 추가
-////        ArrayList<String> textList = new ArrayList<>();
-////        textList.add("0");
-////        textList.add("1");
-////        textList.add("2");
-////        textList.add("3");
-////        textList.add("4");
-////        seatAdapter.submitList(textList);
+    // 리사이클러뷰 초기화
+    private void initRecyclerView() {
+        recyclerView = findViewById(R.id.recyclerView);
+        seatAdapter = new SeatAdapter(new SeatAdapter.SeatDiffUtil());
+        recyclerView.setAdapter(seatAdapter);
 //        layout = new GridLayoutManager(this, 5);
 //        recyclerView.setLayoutManager(layout);
-//
-//        count = new ArrayList<>();
-//        dbCreate();
-//        seatSet();
-//    }
+
+        count = new ArrayList<>();
+        seatSet();
+        dbCreate();
+    }
 
     protected void onPause() {
         super.onPause();
@@ -161,7 +149,7 @@ public class ReserveDialog extends AppCompatActivity {
                     else
                         count.add(seatDto);
                     Log.e("seatTest", String.valueOf(seatTest.getSeatNum()));
-                    recyclerView.setAdapter(new SeatAdapter(getApplication(), (ArrayList<SeatDto>) count));
+
                 }
 
                 @Override
@@ -172,9 +160,10 @@ public class ReserveDialog extends AppCompatActivity {
         }
     }
 
-
     // 좌석 수 DB 생성
     private void dbCreate() {
+        List<SeatDto> seatList = new ArrayList<>();
+
         String key = databaseReference.child("floor").push().getKey();
         for (int i=1; i<=90; i++) {
             SeatDto seat = new SeatDto(i);
@@ -182,9 +171,11 @@ public class ReserveDialog extends AppCompatActivity {
             Map<String, Object> seatUpdates = new HashMap<>();
             seatUpdates.put("/Floor/" + i + "seat", postValues);
             databaseReference.updateChildren(seatUpdates);
+
+            seatList.add(seat);
         }
+
+        seatAdapter.submitList(seatList);
     }
 
 }
-
-

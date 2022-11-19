@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.CountDownTimer;
 import android.util.Log;
 
-import com.example.hallym_smartapp.Reservation.Activity.CountAdapter;
 import com.example.hallym_smartapp.Reservation.Function.ReservatioFunction;
 import com.example.hallym_smartapp.Reservation.Function.SeatAdapter;
 
@@ -15,9 +14,9 @@ public class TimeTest {
     long mTimeLeft;
     CountDownTimer mCountDown;
     Context context;
-    SeatAdapter.MyViewHolder holder;
+    SeatAdapter.SeatViewHolder holder;
 
-    public TimeTest(SeatAdapter.MyViewHolder holder, Context context, long mTimeLeft){
+    public TimeTest(SeatAdapter.SeatViewHolder holder, Context context, long mTimeLeft){
         this.holder= holder;
         this.context = context;
         this.mTimeLeft = mTimeLeft;
@@ -49,7 +48,7 @@ public class TimeTest {
     }
 
 
-    public void updateCountDownText(SeatAdapter.MyViewHolder holder) {
+    public void updateCountDownText(SeatAdapter.SeatViewHolder holder) {
         int hours = (int) (mTimeLeft / 3600000);
         int minutes = (int) (mTimeLeft % 3600000) / 60000;
         int seconds = (int) ((mTimeLeft % 3600000) % 60000) / 1000;

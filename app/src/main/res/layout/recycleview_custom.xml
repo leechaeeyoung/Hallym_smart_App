@@ -22,7 +22,7 @@
             android:max="100"
             android:progress="60"
             android:progressBackgroundTint="#D87F97"
-            android:progressTint="@color/lightBlue" />
+            android:progressTint="#B2CCFF" />
 
         <TextView
             android:id="@+id/seatNumber"

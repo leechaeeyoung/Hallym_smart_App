@@ -50,9 +50,14 @@ public class MySeat extends AppCompatActivity {
         extendBt = (Button) findViewById(R.id.extendBt);
         cancelBt = (Button) findViewById(R.id.cancelBt);
 
-        if(loginStatus){
+        if(loginStatus)
             userDetail(loginId);
-        }
+    }
+    protected void onPause(){
+        super.onPause();
+        Log.e("pauseTest","dd");
+        if(flag)
+            mCountDown.cancel();
     }
 
     public void userDetail(String id){

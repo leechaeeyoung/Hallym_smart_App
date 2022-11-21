@@ -51,12 +51,12 @@ public class ReservationActivity extends AppCompatActivity {
 
         setTitle("좌석 현황");
 
-        Fragment fragment2 = new Fragment2();
 
         list_3floor = findViewById(R.id.list_3floor);
         nowCnt();
 
         findViewById(R.id.bt_tab2).setOnClickListener(v -> callFragment(FRAGMENT2));
+
     }
 
 

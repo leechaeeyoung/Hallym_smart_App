@@ -1,5 +1,7 @@
 package com.example.hallym_smartapp.MyPage;
 
+import android.annotation.SuppressLint;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -7,7 +9,7 @@ import java.util.Date;
 
 public class Timeadd {
     public String add(String str) {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
         Date date = new Date();
 
         try {
@@ -26,7 +28,7 @@ public class Timeadd {
         return result;
     }
     public String renew(String str) {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
         Date date = new Date();
 
         try {

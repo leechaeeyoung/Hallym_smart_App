@@ -60,7 +60,7 @@ public class TimeConvert {
 
     }
     public long getDiff(){
-        Log.e("계산된 시간값", Long.toString(diff));
+        Log.e("계산된 시간", Long.toString(diff));
         return diff;
     }
 

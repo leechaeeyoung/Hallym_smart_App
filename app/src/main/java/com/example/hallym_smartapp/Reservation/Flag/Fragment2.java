@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,11 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hallym_smartapp.R;
-import com.example.hallym_smartapp.Reservation.Activity.CountAdapter;
 import com.example.hallym_smartapp.Reservation.Function.SeatAdapter;
-import com.example.hallym_smartapp.Reservation.Function.SeatDto;
-
-import java.util.ArrayList;
 
 public class Fragment2 extends Fragment {
     // 리사이클러뷰 추가

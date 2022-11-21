@@ -63,6 +63,7 @@ public class ApiActivity extends AppCompatActivity
     private Marker currentMarker = null;
     private Marker buildMarker = null;
     private Classroom key;
+    Button bt;
 
     private static final String TAG = "googlemap_example";
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
@@ -120,26 +121,10 @@ public class ApiActivity extends AppCompatActivity
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        Button bt = (Button) findViewById(R.id.bt_img);
-        Button bt2 = (Button) findViewById(R.id.bt_clear);
+
+       bt = (Button) findViewById(R.id.bt_clear);
 
         bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mMap.clear();
-                LatLng currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(currentLatLng);
-                markerOptions.title("현위치");
-                markerOptions.draggable(true);
-                markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
-
-                currentMarker = mMap.addMarker(markerOptions);
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude())));
-            }
-        });
-
-        bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(key.building().equals("공학관") && key.thisFloor()==1) {
@@ -192,10 +177,12 @@ public class ApiActivity extends AppCompatActivity
                     buildMarker = mMap.addMarker(markerOptions);
                     mMap.setOnMarkerClickListener(markerClickListener);
                     mMap.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(key.getLat(), key.getLon())));
+                    bt.setVisibility(View.VISIBLE);
                 } else {
                     buildMarker = mMap.addMarker(markerOptions);
                     mMap.setOnMarkerClickListener(markerClickListener);
                     mMap.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(key.getLat(), key.getLon())));
+                    bt.setVisibility(View.VISIBLE);
                 }
 
 

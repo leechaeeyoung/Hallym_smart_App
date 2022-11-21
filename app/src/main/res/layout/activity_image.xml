@@ -15,7 +15,7 @@
         android:id="@+id/bt_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0066B3"
+        android:background="@drawable/round_button2"
         android:textColor="#FFFFFF"
         android:layout_margin="10dp"
         android:text="돌아가기"></Button>

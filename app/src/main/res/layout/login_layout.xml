@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#0066B3"
+        android:background="@drawable/round_button"
         android:textColor="#FFFFFF"
         android:text="로그인"
         android:textSize="16dp"/>
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="#00B6AD"
+        android:background="@drawable/round_button2"
         android:textColor="#FFFFFF"
         android:text="회원가입"
         android:textSize="16dp"/>

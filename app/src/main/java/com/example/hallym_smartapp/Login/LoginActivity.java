@@ -51,11 +51,6 @@ public class LoginActivity extends AppCompatActivity {
         signBt = findViewById(R.id.signBt);
 //        thirdFloor=findViewById(R.id.thirdFloor);
 
-        // test
-        thirdFloor.setOnClickListener(v -> {
-            intent = new Intent(getApplicationContext(), ReserveDialog.class);
-            startActivity(intent);
-        });
         // 회원가입 버튼 클릭 이밴트
         signBt.setOnClickListener(v -> {
             intent = new Intent(getApplicationContext(), SignUp.class);

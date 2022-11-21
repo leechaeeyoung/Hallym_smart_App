@@ -173,6 +173,7 @@ public class ApiActivity extends AppCompatActivity
 
                 if(building1=="존재하지 않습니다." && building2=="존재하지 않습니다.") {
                     Toast.makeText(getApplicationContext(), "존재하지 않는 강의실입니다.", Toast.LENGTH_LONG).show();
+                    bt.setVisibility(View.GONE);
                 }else if(building1!="존재하지 않습니다."){
                     buildMarker = mMap.addMarker(markerOptions);
                     mMap.setOnMarkerClickListener(markerClickListener);

@@ -42,12 +42,6 @@ public class TimeConvert {
 
         //시, 분, 초로 표현
         this.diff = reqTime - currentTime;
-        Log.e("test time",String.valueOf(diff));
-        this.hour = diff / 3600000;
-        this.min = (diff % 3600000) / 60000;
-        this.second = ((diff % 3600000) % 60000) / 1000;
-
-        this.diff = reqTime - currentTime;
         Log.e("test",String.valueOf(diff));
         this.hour=diff/3600000;
         this.min = (diff%3600000)/60000;

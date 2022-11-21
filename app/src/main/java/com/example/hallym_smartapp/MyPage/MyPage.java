@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hallym_smartapp.Api.ApiActivity;
+import com.example.hallym_smartapp.Login.LoginActivity;
 import com.example.hallym_smartapp.Login.UserDTO;
 import com.example.hallym_smartapp.R;
 import com.example.hallym_smartapp.Reservation.Activity.ReservationActivity;
@@ -36,6 +37,7 @@ import java.util.function.Function;
 
 public class MyPage extends AppCompatActivity {
     TextView myIdInfo,myNameInfo;
+    Button Btn_myInfo;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -47,16 +49,17 @@ public class MyPage extends AppCompatActivity {
         setTitle("마이페이지");
         myIdInfo = (TextView)findViewById(R.id.myIdInfo);
         myNameInfo = (TextView)findViewById(R.id.myNameInfo);
+        Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
 
         if(loginStatus)
             userDetail(loginId);
 
-/*        logoutBt.setOnClickListener(v -> {
+        Btn_myInfo.setOnClickListener(v -> {
             finish();
-            Intent intent = new Intent(getApplicationContext(), ApiActivity.class);
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
-        });*/
+        });
     }
 
     // 사용자 개인정보 조회

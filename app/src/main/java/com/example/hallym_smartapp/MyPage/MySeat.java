@@ -97,6 +97,17 @@ public class MySeat extends AppCompatActivity {
                     pauseTimer();
                     function.renew(userDTO);
                 });
+                if(userDTO.isSeatState()){
+                    todaySeat.setVisibility(View.VISIBLE);
+                    timerem.setVisibility(View.VISIBLE);
+                    extendBt.setVisibility(View.VISIBLE);
+                    cancelBt.setVisibility(View.VISIBLE);
+                } else {
+                    todaySeat.setVisibility(View.INVISIBLE);
+                    timerem.setVisibility(View.INVISIBLE);
+                    extendBt.setVisibility(View.INVISIBLE);
+                    cancelBt.setVisibility(View.INVISIBLE);
+                }
 
             }
             @Override

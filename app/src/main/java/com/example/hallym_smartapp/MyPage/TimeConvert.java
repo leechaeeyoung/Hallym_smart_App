@@ -1,7 +1,6 @@
 package com.example.hallym_smartapp.MyPage;
 
 
-import android.annotation.SuppressLint;
 import android.util.Log;
 
 import java.text.ParseException;
@@ -28,7 +27,7 @@ public class TimeConvert {
 
         //현재시간 Date
         Date curDate = new Date();
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
 
         //요청시간을 Date로 parsing 후 time가져오기
         this.reqDate = null;

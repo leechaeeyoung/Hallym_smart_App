@@ -96,14 +96,16 @@ public class ReserveDialog extends AppCompatActivity {
     }
 
     // 예약 다이얼로그
-    public void reservationDialog(final int floorNum,final int seatNum, final UserDTO userDTO, final List<SeatDto> seatDto){
+    public void reservationDialog(int floorNum, final int seatNum, final UserDTO userDTO, final List<SeatDto> seatDto){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        floorNum = 3;
         builder.setTitle("예약(현재좌석: " + seatNum + "\n예약하시겠습니까?");
         builder.setCancelable(false);
+        int finalFloorNum = floorNum;
         builder.setPositiveButton("예", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                function.reservationSeat(seatNum, floorNum, userDTO, seatDto, reservationTime());
+                function.reservationSeat(seatNum, finalFloorNum, userDTO, seatDto, reservationTime());
                 Toast.makeText(context, seatNum + "번 자리가 예약되었습니다.", Toast.LENGTH_SHORT).show();
                 TimeConvert timeConvert = new TimeConvert(userDTO.getRemainTime());
                 Long timeValue = timeConvert.getDiff();
@@ -113,6 +115,26 @@ public class ReserveDialog extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(context,"취소",Toast.LENGTH_SHORT).show();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+    // 시간연장 다이얼로그
+    public void extendDialog(final List<SeatDto> seatDto, final UserDTO userDTO){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage("연장하시겠습니까?");
+        builder.setPositiveButton("예", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                function.renew(userDTO);
+                Toast.makeText(context, "연장 완료", Toast.LENGTH_SHORT).show();
+            }
+        });
+        builder.setPositiveButton("아니요", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(context,"취소되었습니다.",Toast.LENGTH_SHORT).show();
             }
         });
         AlertDialog alertDialog = builder.create();

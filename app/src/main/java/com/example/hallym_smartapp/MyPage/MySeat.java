@@ -108,7 +108,6 @@ public class MySeat extends AppCompatActivity {
                     extendBt.setVisibility(View.INVISIBLE);
                     cancelBt.setVisibility(View.INVISIBLE);
                 }
-
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

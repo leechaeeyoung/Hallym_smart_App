@@ -37,15 +37,20 @@ public class ReservationActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
+    private final int MyPageFrag = 1;
+
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.reservation_main);
         super.onCreate(savedInstanceState);
+
+        setTitle("좌석 현황");
 
         bt_tab2=findViewById(R.id.bt_tab2);
         bt_tab2.setOnClickListener(v -> {
             intent = new Intent(getApplicationContext(), ReserveDialog.class);
             startActivity(intent);
         });
+        findViewById(R.id.bt_tab1).setOnClickListener(v -> callFragment(MyPageFrag));
     }
 
 //    // 층수마다 플래그
@@ -71,15 +76,15 @@ public class ReservationActivity extends AppCompatActivity {
 //    }
 //
 //
-//    private void callFragment(int fragment_no) {
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//
-//        switch (fragment_no) {
-//            case 1:
-//                MyPageFrag mypage = new MyPageFrag();
-//                transaction.replace(R.id.fragment_container, mypage);
-//                transaction.commit();
-//                break;
+    private void callFragment(int fragment_no) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        switch (fragment_no) {
+            case 1:
+                MyPageFrag mypage = new MyPageFrag();
+                transaction.replace(R.id.fragment_container, mypage);
+                transaction.commit();
+                break;
 //            case 2:
 //                Fragment2 frag2 = new Fragment2();
 //                transaction.replace(R.id.fragment_container, frag2);
@@ -95,8 +100,8 @@ public class ReservationActivity extends AppCompatActivity {
 //                transaction.replace(R.id.fragment_container, frag4);
 //                transaction.commit();
 //                break;
-//        }
-//    }
+        }
+    }
 
     // 현재 좌석 수를 나타네는 메소드
     public void nowCnt() {

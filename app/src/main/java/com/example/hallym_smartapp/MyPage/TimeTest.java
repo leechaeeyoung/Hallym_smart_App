@@ -12,7 +12,7 @@ import java.util.Locale;
 public class TimeTest {
     boolean timerCheck = false;
     long mTimeLeft;
-    CountDownTimer mCountDown;
+    CountDownTimer mCountDown1;
     Context context;
     SeatAdapter.MyViewHolder holder;
 
@@ -23,7 +23,7 @@ public class TimeTest {
     }
 
     public void startTimer() {
-        mCountDown = new CountDownTimer(mTimeLeft, 1000) {
+        mCountDown1 = new CountDownTimer(mTimeLeft, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -43,7 +43,7 @@ public class TimeTest {
 
 
     public void pauseTimer() {
-        mCountDown.cancel();
+        mCountDown1.cancel();
         timerCheck = false;
     }
 
@@ -51,7 +51,6 @@ public class TimeTest {
     public void updateCountDownText(SeatAdapter.MyViewHolder holder) {
         int hours = (int) (mTimeLeft / 3600000);
         int minutes = (int) (mTimeLeft % 3600000) / 60000;
-        int seconds = (int) ((mTimeLeft % 3600000) % 60000) / 1000;
 
         Log.e("TimerTest", "test1");
         String timeLeftFormatted1 = String.format(Locale.getDefault(), "%02d : %02d", hours, minutes);

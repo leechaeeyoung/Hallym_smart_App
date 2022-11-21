@@ -50,7 +50,6 @@ public class ReservationActivity extends AppCompatActivity {
 
     private Button bt_tab1, bt_tab2, bt_tab3, bt_tab4;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

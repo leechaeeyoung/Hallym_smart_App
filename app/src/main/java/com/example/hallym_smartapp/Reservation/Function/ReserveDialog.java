@@ -67,8 +67,8 @@ public class ReserveDialog extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         seatAdapter = new SeatAdapter(new SeatAdapter.SeatDiffUtil());
         recyclerView.setAdapter(seatAdapter);
-//        layout = new GridLayoutManager(this, 5);
-//        recyclerView.setLayoutManager(layout);
+        layout = new GridLayoutManager(this, 5);
+        recyclerView.setLayoutManager(layout);
 
         count = new ArrayList<>();
         seatSet();
@@ -82,7 +82,7 @@ public class ReserveDialog extends AppCompatActivity {
     }
 
     private String reservationTime() {
-        SimpleDateFormat format1 = new SimpleDateFormat(" mm월 dd일  HH시 mm분 ss초");
+        SimpleDateFormat format1 = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
         now = System.currentTimeMillis();
         date = new Date(now);
         return format1.format(date);

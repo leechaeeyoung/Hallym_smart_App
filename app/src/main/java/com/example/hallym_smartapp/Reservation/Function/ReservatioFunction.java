@@ -4,6 +4,7 @@ import com.example.hallym_smartapp.Login.UserDTO;
 import com.example.hallym_smartapp.MyPage.TimeTest;
 import com.example.hallym_smartapp.MyPage.Timeadd;
 
+import java.sql.Time;
 import java.util.List;
 
 public class ReservatioFunction {
@@ -12,8 +13,8 @@ public class ReservatioFunction {
     public static void reservationSeat(int floorNum, int seatNum, UserDTO userDTO, List<SeatDto> seatDto, String reservationTime){
         Timeadd timeadd = new Timeadd();
         seatDao.upCnt();
-        seatDao.updateSeat(floorNum,seatNum,reservationTime);
-        seatDao.updateUser(seatNum,floorNum,userDTO,true,userDTO.getReservationDate(),userDTO.getRemainTime());
+        seatDao.updateSeat(floorNum,seatNum, timeadd.add(reservationTime));
+        seatDao.updateUser(seatNum,floorNum,userDTO,true,reservationTime,timeadd.add(reservationTime));
         seatDto.get(seatNum).setSeatCheck(true); // 예약 완료된 좌석 붉은색으로변경
     }
     public static void deleteInfo(UserDTO userDTO){

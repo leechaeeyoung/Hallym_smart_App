@@ -26,8 +26,11 @@ public class TimeConvert {
         String reqDateStr = date;
 
         //현재시간 Date
-        Date curDate = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+        long now = System.currentTimeMillis();
+        Date curDate = new Date(now);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM월 dd일");
+//        Date curDate = new Date();
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
 
         //요청시간을 Date로 parsing 후 time가져오기
         this.reqDate = null;

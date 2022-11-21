@@ -5,6 +5,7 @@ import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class TimeConvert {
     long currentTime;
@@ -24,13 +25,13 @@ public class TimeConvert {
 
         // 요청시간을 date로 parsing 후 시간 가져오기
         this.reqDate = null;
+
         try{
             this.reqDate = dateFormat.parse(reqDateString);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        assert reqDate != null;
-        this.reqTime=reqDate.getTime();
+        this.reqTime= Objects.requireNonNull(reqDate).getTime();
 
 
         // 현재시간을 요청시간 형태로 가져오기기

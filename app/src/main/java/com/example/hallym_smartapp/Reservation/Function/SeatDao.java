@@ -59,7 +59,7 @@ public class SeatDao {
     }
 
     // 빈좌석
-   public void emptySeat(int floorNum, int seatNum){
+    public void emptySeat(int floorNum, int seatNum){
         String key = databaseReference.child("Floor").push().getKey();
         SeatDto seatDto = new SeatDto(seatNum, "", false,"");
         Map<String,Object> postValues = seatDto.map();
@@ -85,3 +85,4 @@ public class SeatDao {
     }
 
 }
+

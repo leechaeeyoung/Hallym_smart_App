@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +20,7 @@ import com.example.hallym_smartapp.Reservation.Function.SeatDto;
 import java.util.ArrayList;
 
 public class Fragment2 extends Fragment {
-
+    Button bt_tab2;
     // 리사이클러뷰 추가
     RecyclerView recyclerView;
     // 리사클러뷰 어댑터 추가
@@ -29,6 +30,7 @@ public class Fragment2 extends Fragment {
 
     public Fragment2(){
     }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedI){
         return inflater.inflate(R.layout.third_floor, container,false);
     }

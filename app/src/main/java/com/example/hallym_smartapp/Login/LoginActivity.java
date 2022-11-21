@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordText = findViewById(R.id.passwordText);
         loginBt = findViewById(R.id.loginBt);
         signBt = findViewById(R.id.signBt);
-        thirdFloor=findViewById(R.id.thirdFloor);
+//        thirdFloor=findViewById(R.id.thirdFloor);
 
         // test
         thirdFloor.setOnClickListener(v -> {
@@ -72,12 +72,12 @@ public class LoginActivity extends AppCompatActivity {
                 loginCheck(id, pw);
         });
 
-        // 예약 메인 화면 테스트
-        Button btnMain = findViewById(R.id.main);
-        btnMain.setOnClickListener(v -> {
-            intent = new Intent(getApplicationContext(), ReservationActivity.class);
-            startActivity(intent);
-        });
+//        // 예약 메인 화면 테스트
+//        Button btnMain = findViewById(R.id.main);
+//        btnMain.setOnClickListener(v -> {
+//            intent = new Intent(getApplicationContext(), ReservationActivity.class);
+//            startActivity(intent);
+//        });
 
         /*Button btn3 = (Button) findViewById(R.id.thirdFloor);
         btn3.setOnClickListener(view -> {

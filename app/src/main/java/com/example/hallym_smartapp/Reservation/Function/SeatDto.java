@@ -1,5 +1,7 @@
 package com.example.hallym_smartapp.Reservation.Function;
 
+import androidx.annotation.Nullable;
+
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
@@ -67,6 +69,16 @@ public class SeatDto {
         result.put("seatState",seatState);
         result.put("remainTime",remainTime);
         return result;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        return super.equals(obj);
     }
 }
 

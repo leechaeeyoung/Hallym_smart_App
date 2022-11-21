@@ -57,17 +57,17 @@
         android:text="회원가입"
         android:textSize="16dp"/>
 
-    <!--테스트용-->
-    <Button
-        android:id="@+id/thirdFloor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="3층"/>
+<!--    &lt;!&ndash;테스트용&ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/thirdFloor"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="3층"/>-->
 
-    <Button
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="예약메인화면"/>
+<!--    <Button-->
+<!--        android:id="@+id/main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="예약메인화면"/>-->
 
 </LinearLayout>

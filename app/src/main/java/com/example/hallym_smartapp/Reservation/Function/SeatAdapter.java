@@ -122,7 +122,6 @@ public class SeatAdapter extends ListAdapter<SeatDto, SeatAdapter.MyViewHolder> 
             return oldItem.equals(newItem);
         }
 
-        @SuppressLint("DiffUtilEquals")
         @Override
         public boolean areContentsTheSame(@NonNull SeatDto oldItem, @NonNull SeatDto newItem) {
             return oldItem.equals(newItem);
@@ -148,8 +147,6 @@ public class SeatAdapter extends ListAdapter<SeatDto, SeatAdapter.MyViewHolder> 
         });
     }
 }
-
-
 
 
 

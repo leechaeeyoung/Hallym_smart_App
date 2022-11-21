@@ -39,14 +39,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:text="예약 좌석"
                     android:textSize="18sp"
                     android:textColor="#000000"/>
 
                 <TextView
                     android:id="@+id/todaySeat"
-                    android:layout_width="100dp"
+                    android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="좌석 정보"
@@ -61,14 +61,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:text="남은 시간"
                     android:textSize="18sp"
                     android:textColor="#000000"/>
 
                 <TextView
                     android:id="@+id/timerem"
-                    android:layout_width="100dp"
+                    android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="시간 정보"

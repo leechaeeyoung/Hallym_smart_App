@@ -44,7 +44,7 @@ public class Fragment2 extends Fragment {
     // 리사이클러뷰 초기화
     private void initRecyclerView() {
         recyclerView = requireView().findViewById(R.id.recyclerView);
-        layout = new GridLayoutManager(getActivity(), 4);
+        layout = new GridLayoutManager(getActivity(), 5);
         seatAdapter = new SeatAdapter(new SeatAdapter.SeatDiffUtil());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layout);

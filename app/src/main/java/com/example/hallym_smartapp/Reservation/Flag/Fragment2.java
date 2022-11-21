@@ -32,6 +32,7 @@ public class Fragment2 extends Fragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedI){
+        setHasOptionsMenu(true);
         return inflater.inflate(R.layout.third_floor, container,false);
     }
 

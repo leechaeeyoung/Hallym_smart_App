@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager2.adapter.FragmentViewHolder;
 
 import com.example.hallym_smartapp.R;
 import com.example.hallym_smartapp.Reservation.Flag.MyPageFrag;
@@ -32,7 +33,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ReservationActivity extends AppCompatActivity implements View.OnClickListener {
+public class ReservationActivity extends AppCompatActivity {
     Intent intent;
     LinearLayout list_3floor;
     TextView thirdSeatNum;
@@ -60,39 +61,47 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
         list_3floor = findViewById(R.id.list_3floor);
         nowCnt();
 
+        findViewById(R.id.bt_tab2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callFragment(FRAGMENT2);
+            }
+        });
+
+
         // tab키 참조
-        bt_tab1 = (Button) findViewById(R.id.bt_tab1);
-        bt_tab2 = (Button) findViewById(R.id.bt_tab2);
-        bt_tab3 = (Button) findViewById(R.id.bt_tab3);
-        bt_tab4 = (Button) findViewById(R.id.bt_tab4);
+//        bt_tab1 = (Button) findViewById(R.id.bt_tab1);
+//        bt_tab2 = (Button) findViewById(R.id.bt_tab2);
+//        bt_tab3 = (Button) findViewById(R.id.bt_tab3);
+//        bt_tab4 = (Button) findViewById(R.id.bt_tab4);
 
         // 버튼 누를 때 리스너 연결
-        bt_tab1.setOnClickListener(this);
-        bt_tab2.setOnClickListener(this);
-        bt_tab3.setOnClickListener(this);
-        bt_tab4.setOnClickListener(this);
+//        bt_tab1.setOnClickListener(this);
+//        bt_tab2.setOnClickListener(this);
+//        bt_tab3.setOnClickListener(this);
+//        bt_tab4.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.bt_tab1:
-                callFragment(MyPageFrag);
-                break;
-            case R.id.bt_tab2:
-                // 3층 버튼 클릭 시 프래그 2 호출
-                callFragment(FRAGMENT2);
-                break;
-            case R.id.bt_tab3:
-                // 4층 버튼 클릭 시 프래그 3 호출
-                callFragment(FRAGMENT3);
-                break;
-            case R.id.bt_tab4:
-                // 5층 버튼 클릭 시 프래그 4 호출
-                callFragment(FRAGMENT4);
-                break;
-        }
-    }
+//    @Override
+//    public void onClick(View v) {
+//       switch (v.getId()) {
+//            case R.id.bt_tab1:
+//                callFragment(MyPageFrag);
+//                break;
+//            case R.id.bt_tab2:
+//                // 3층 버튼 클릭  시 프래그 2 호출
+//                callFragment(FRAGMENT2);
+//                break;
+//            case R.id.bt_tab3:
+//                // 4층 버튼 클릭 시 프래그 3 호출
+//                callFragment(FRAGMENT3);
+//                break;
+//            case R.id.bt_tab4:
+//                // 5층 버튼 클릭 시 프래그 4 호출
+//                callFragment(FRAGMENT4);
+//                break;
+//        }
+//    }
 
     private void callFragment(int fragment_no) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

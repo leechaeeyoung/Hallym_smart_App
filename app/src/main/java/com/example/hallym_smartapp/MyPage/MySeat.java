@@ -1,5 +1,8 @@
 package com.example.hallym_smartapp.MyPage;
 
+import static com.example.hallym_smartapp.Login.LoginActivity.loginId;
+import static com.example.hallym_smartapp.Login.LoginActivity.loginStatus;
+
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -22,7 +25,6 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Locale;
-import java.util.logging.FileHandler;
 
 public class MySeat extends AppCompatActivity {
     TextView todaySeat,timerem;
@@ -47,6 +49,10 @@ public class MySeat extends AppCompatActivity {
         timerem = (TextView) findViewById(R.id.timerem);
         extendBt = (Button) findViewById(R.id.extendBt);
         cancelBt = (Button) findViewById(R.id.cancelBt);
+
+        if(loginStatus){
+            userDetail(loginId);
+        }
     }
 
     public void userDetail(String id){

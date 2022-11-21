@@ -18,14 +18,24 @@ public class TimeConvert {
     public TimeConvert(String date) {
         String reqDateString = date;
 
+        // 현재 date
         Date currentDate = new Date();
         SimpleDateFormat dateFormat=new SimpleDateFormat("MM월 dd일 HH시 mm분 ss초");
-        this.reqDate = null;
 
+        // 요청시간을 date로 parsing 후 시간 가져오기
+        this.reqDate = null;
         try{
             this.reqDate = dateFormat.parse(reqDateString);
-            Log.e("남은시간:",String.valueOf(reqDate));
-        } catch (ParseException e){
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        this.reqTime=reqDate.getTime();
+
+
+        // 현재시간을 요청시간 형태로 가져오기기
+        try{
+           currentDate = dateFormat.parse(dateFormat.format(currentDate));
+        } catch (ParseException e) {
             e.printStackTrace();
         }
         this.currentTime = currentDate.getTime();

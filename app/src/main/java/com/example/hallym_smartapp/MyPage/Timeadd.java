@@ -18,6 +18,8 @@ public class Timeadd {
 
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
+
+        // 2시간 연장
         cal.add(Calendar.HOUR, 2);
         String result = format.format(cal.getTime());
         System.out.println("test" + format.format(cal.getTime()));
@@ -35,6 +37,8 @@ public class Timeadd {
 
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
+
+
         cal.add(Calendar.HOUR, 2);
         String result =  format.format(cal.getTime());
         System.out.println("날짜"+format.format(cal.getTime()));

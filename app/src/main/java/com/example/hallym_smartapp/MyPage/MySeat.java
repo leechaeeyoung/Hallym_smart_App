@@ -55,6 +55,7 @@ public class MySeat extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 final UserDTO userDTO = snapshot.getValue(UserDTO.class);
+
                 if(userDTO.isSeatState()){
                     // 예약 테스트 코드
                     TimeConvert timeConvert=new TimeConvert(userDTO.getRemainTime());
@@ -69,17 +70,14 @@ public class MySeat extends AppCompatActivity {
 
                 // myseat에 좌석정보, 남은시간 뜨는 칸
                 todaySeat.setText(userDTO.getFloorNum()+"층 열람실 "+userDTO.getSeatNum()+"번 자리");
-                timerem.setText(userDTO.getRemainTime());
+                timerem.setText(userDTO.getReservationDate());
 
                 // 예약 취소
-                cancelBt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mCountDown.cancel();
-                        Toast.makeText(getApplication(), (userDTO.getSeatNum())+"번 자리가 취소되었습니다.", Toast.LENGTH_SHORT).show();
-                        ReservatioFunction function = new ReservatioFunction();
-                        function.deleteInfo(userDTO);
-                    }
+                cancelBt.setOnClickListener(v -> {
+                    mCountDown.cancel();
+                    Toast.makeText(getApplication(), (userDTO.getSeatNum())+"번 자리가 취소되었습니다.", Toast.LENGTH_SHORT).show();
+                    ReservatioFunction function = new ReservatioFunction();
+                    function.deleteInfo(userDTO);
                 });
 
                 // 연장
@@ -88,6 +86,7 @@ public class MySeat extends AppCompatActivity {
                     pauseTimer();
                     function.renew(userDTO);
                 });
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Timeadd {
     public String add(String str) {
-        SimpleDateFormat format = new SimpleDateFormat("MM월 dd일 HH시 mm분 ss초");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
         Date date = new Date();
 
         try {
@@ -22,11 +22,11 @@ public class Timeadd {
         // 2시간 연장
         cal.add(Calendar.HOUR, 2);
         String result = format.format(cal.getTime());
-        System.out.println("test" + format.format(cal.getTime()));
+        System.out.println("날짜확인 " + format.format(cal.getTime()));
         return result;
     }
     public String renew(String str) {
-        SimpleDateFormat format = new SimpleDateFormat("MM월 dd일 HH시 mm분 ss초");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
         Date date = new Date();
 
         try {
@@ -38,10 +38,9 @@ public class Timeadd {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
 
-
         cal.add(Calendar.HOUR, 2);
         String result =  format.format(cal.getTime());
-        System.out.println("날짜"+format.format(cal.getTime()));
+        System.out.println("날짜 확인"+format.format(cal.getTime()));
         return result;
     }
 }

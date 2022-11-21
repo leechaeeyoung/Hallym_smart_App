@@ -11,14 +11,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hallym_smartapp.R;
 import com.example.hallym_smartapp.Reservation.Flag.MyPageFrag;
-import com.example.hallym_smartapp.Reservation.Flag.Fragment2;
-import com.example.hallym_smartapp.Reservation.Flag.Fragment3;
-import com.example.hallym_smartapp.Reservation.Flag.Fragment4;
 import com.example.hallym_smartapp.Reservation.Function.ReserveDialog;
 import com.example.hallym_smartapp.Reservation.Function.SeatCnt;
 import com.google.firebase.database.DataSnapshot;
@@ -52,6 +48,7 @@ public class ReservationActivity extends AppCompatActivity {
         });
         findViewById(R.id.bt_tab1).setOnClickListener(v -> callFragment(MyPageFrag));
     }
+
 
 //    // 층수마다 플래그
 //    private final int MyPageFrag = 1;

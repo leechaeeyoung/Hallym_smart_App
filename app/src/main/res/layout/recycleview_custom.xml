@@ -21,8 +21,8 @@
             android:layout_marginBottom="10dp"
             android:max="100"
             android:progress="60"
-            android:progressBackgroundTint="@drawable/available_seat"
-            android:progressTint="@drawable/not_available_seat" />
+            android:progressBackgroundTint="#D87F97"
+            android:progressTint="@color/lightBlue" />
 
         <TextView
             android:id="@+id/seatNumber"

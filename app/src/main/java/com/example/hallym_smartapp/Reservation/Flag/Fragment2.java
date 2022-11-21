@@ -20,7 +20,6 @@ import com.example.hallym_smartapp.Reservation.Function.SeatDto;
 import java.util.ArrayList;
 
 public class Fragment2 extends Fragment {
-    Button bt_tab2;
     // 리사이클러뷰 추가
     RecyclerView recyclerView;
     // 리사클러뷰 어댑터 추가

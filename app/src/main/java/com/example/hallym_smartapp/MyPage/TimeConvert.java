@@ -29,6 +29,7 @@ public class TimeConvert {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        assert reqDate != null;
         this.reqTime=reqDate.getTime();
 
 

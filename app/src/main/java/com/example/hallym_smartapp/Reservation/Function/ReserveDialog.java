@@ -96,16 +96,14 @@ public class ReserveDialog extends AppCompatActivity {
     }
 
     // 예약 다이얼로그
-    public void reservationDialog(int floorNum, final int seatNum, final UserDTO userDTO, final List<SeatDto> seatDto){
+    public void reservationDialog(final int floorNum, final int seatNum, final UserDTO userDTO, final List<SeatDto> seatDto){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        floorNum = 3;
         builder.setTitle("예약(현재좌석: " + seatNum + "\n예약하시겠습니까?");
         builder.setCancelable(false);
-        int finalFloorNum = floorNum;
         builder.setPositiveButton("예", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                function.reservationSeat(seatNum, finalFloorNum, userDTO, seatDto, reservationTime());
+                function.reservationSeat(seatNum, floorNum, userDTO, seatDto, reservationTime());
                 Toast.makeText(context, seatNum + "번 자리가 예약되었습니다.", Toast.LENGTH_SHORT).show();
                 TimeConvert timeConvert = new TimeConvert(userDTO.getRemainTime());
                 Long timeValue = timeConvert.getDiff();

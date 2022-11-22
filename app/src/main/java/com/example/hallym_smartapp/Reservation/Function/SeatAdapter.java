@@ -65,7 +65,7 @@ public class SeatAdapter extends ListAdapter<SeatDto, SeatAdapter.MyViewHolder> 
 
         final int seatNum = getCurrentList().get(position).getSeatNum();
         final String userId = getCurrentList().get(position).getUsedId();
-        final boolean seatCheck = getCurrentList().get(position).isSeatCheck();
+        final boolean seatCheck = getCurrentList().get(position).isSeatState();
 
         holder.seatNumber.setText("" + seatNum);
 

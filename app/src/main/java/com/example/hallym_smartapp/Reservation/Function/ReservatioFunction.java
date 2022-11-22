@@ -15,7 +15,7 @@ public class ReservatioFunction {
         seatDao.upCnt();
         seatDao.updateSeat(floorNum,seatNum, timeadd.add(reservationTime));
         seatDao.updateUser(seatNum,floorNum,userDTO,true,reservationTime,timeadd.add(reservationTime));
-        seatDto.get(seatNum).setSeatCheck(true); // 예약 완료된 좌석 붉은색으로변경
+        seatDto.get(seatNum).setSeatState(true); // 예약 완료된 좌석 색 변경
     }
     public static void deleteInfo(UserDTO userDTO){
         seatDao.downCnt();

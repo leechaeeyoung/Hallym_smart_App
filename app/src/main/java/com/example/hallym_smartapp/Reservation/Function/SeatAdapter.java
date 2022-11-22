@@ -73,7 +73,7 @@ public class SeatAdapter extends ListAdapter<SeatDto, SeatAdapter.MyViewHolder> 
             holder.seatNumber.setBackgroundResource(R.drawable.available_seat);
 
         if (seatCheck) { // 예약 불가능
-            holder.seatNumber.setBackgroundResource(R.drawable.not_available_seat);
+            holder.seatNumber.setBackgroundResource(R.drawable.box_1s_black_5r_light_blue);
         } // 이미지
 
         // 좌석 클릭 시 이벤트

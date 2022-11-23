@@ -37,7 +37,7 @@ import java.util.function.Function;
 
 public class MyPage extends AppCompatActivity {
     TextView myIdInfo,myNameInfo;
-    Button Btn_myInfo;
+    Button Btn_logout;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
@@ -53,7 +53,8 @@ public class MyPage extends AppCompatActivity {
         if(loginStatus)
             userDetail(loginId);
 
-        Btn_myInfo.setOnClickListener(v -> {
+        Btn_logout = (Button)findViewById(R.id.Btn_logOut);
+        Btn_logout.setOnClickListener(v -> {
             finish();
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

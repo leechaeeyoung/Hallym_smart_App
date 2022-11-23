@@ -43,11 +43,11 @@ public class SeatDto {
         this.userId = usedId;
     }
 
-    public boolean isSeatState() {
+    public boolean isSeatCheck() {
         return seatState;
     }
 
-    public void setSeatState(boolean seatState) {
+    public void setSeatCheck(boolean seatState) {
         this.seatState = seatState;
     }
 
@@ -81,4 +81,3 @@ public class SeatDto {
         return super.equals(obj);
     }
 }
-

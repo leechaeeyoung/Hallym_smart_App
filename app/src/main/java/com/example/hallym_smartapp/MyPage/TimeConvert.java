@@ -4,10 +4,8 @@ package com.example.hallym_smartapp.MyPage;
 import android.util.Log;
 
 import java.text.ParseException;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class TimeConvert {
 
@@ -24,21 +22,23 @@ public class TimeConvert {
 
         //요청시간 String
         String reqDateStr = date;
+        Log.d("reqDateStr", "" + reqDateStr);
 
         //현재시간 Date
         long now = System.currentTimeMillis();
+//        Date curDate = new Date(now);
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("MM월 dd일");
         Date curDate = new Date(now);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MM월 dd일");
-//        Date curDate = new Date();
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
 
         //요청시간을 Date로 parsing 후 time가져오기
         this.reqDate = null;
 
         try {
             this.reqDate = dateFormat.parse(reqDateStr);
-            Log.e("남은시간1",String.valueOf(reqDate));
+            Log.d("reqDateStr", String.valueOf(reqDate));
         } catch (ParseException e) {
+            Log.e("reqDateStr", "" + e);
             e.printStackTrace();
         }
 
@@ -55,14 +55,13 @@ public class TimeConvert {
 
         //시, 분, 초로 표현
         this.diff = reqTime - currentTime;
-        Log.e("test",String.valueOf(diff));
-        this.hour = diff/ 3600000;
+        Log.e("test", String.valueOf(diff));
+        this.hour = diff / 3600000;
         this.min = (diff % 3600000) / 60000;
         this.second = ((diff % 3600000) % 60000) / 1000;
-
-
     }
-    public long getDiff(){
+
+    public long getDiff() {
         Log.e("계산된 시간", Long.toString(diff));
         return diff;
     }

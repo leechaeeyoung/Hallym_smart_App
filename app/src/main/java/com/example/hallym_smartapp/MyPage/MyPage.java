@@ -49,7 +49,6 @@ public class MyPage extends AppCompatActivity {
         setTitle("마이페이지");
         myIdInfo = (TextView)findViewById(R.id.myIdInfo);
         myNameInfo = (TextView)findViewById(R.id.myNameInfo);
-        Btn_myInfo = (Button)findViewById(R.id.Btn_myInfo);
 
         if(loginStatus)
             userDetail(loginId);

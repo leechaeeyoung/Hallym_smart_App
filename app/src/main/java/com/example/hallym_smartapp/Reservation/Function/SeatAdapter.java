@@ -3,7 +3,6 @@ package com.example.hallym_smartapp.Reservation.Function;
 import static com.example.hallym_smartapp.Login.LoginActivity.loginId;
 import static com.example.hallym_smartapp.Login.LoginActivity.loginStatus;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -65,7 +64,7 @@ public class SeatAdapter extends ListAdapter<SeatDto, SeatAdapter.MyViewHolder> 
 
         final int seatNum = getCurrentList().get(position).getSeatNum();
         final String userId = getCurrentList().get(position).getUsedId();
-        final boolean seatCheck = getCurrentList().get(position).isSeatState();
+        final boolean seatCheck = getCurrentList().get(position).isSeatCheck();
 
         holder.seatNumber.setText("" + seatNum);
 
@@ -73,14 +72,20 @@ public class SeatAdapter extends ListAdapter<SeatDto, SeatAdapter.MyViewHolder> 
             holder.seatNumber.setBackgroundResource(R.drawable.available_seat);
 
         if (seatCheck) { // 예약 불가능
-            holder.seatNumber.setBackgroundResource(R.drawable.box_1s_black_5r_light_blue);
+            holder.seatNumber.setBackgroundResource(R.drawable.not_available_seat);
         } // 이미지
 
         // 좌석 클릭 시 이벤트
         holder.seatNumber.setOnClickListener(v -> {
             Log.e("test", Integer.toString(position));
             if (!seatCheck) { // 선택한 좌석이 비어 있있다면
-                third.reservationDialog(floorNum, seatNum, userDto, getCurrentList()); // 자리 예약 다이얼로그 호출
+                third.reservationDialog(
+                        floorNum,
+                        seatNum,
+                        userDto,
+                        getCurrentList(),
+                        () -> notifyDataSetChanged()
+                ); // 자리 예약 다이얼로그 호출
             } else {
 
                 if (userDto.getSeatNum() == (position + 1)) // 선택한 자리가 본인 자리라면

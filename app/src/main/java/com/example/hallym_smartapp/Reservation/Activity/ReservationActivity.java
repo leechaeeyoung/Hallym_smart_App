@@ -49,8 +49,14 @@ public class ReservationActivity extends AppCompatActivity {
         findViewById(R.id.bt_tab1).setOnClickListener(v -> callFragment(MyPageFrag));
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-//    // 층수마다 플래그
+        nowCnt();
+    }
+
+    //    // 층수마다 플래그
 //    private final int MyPageFrag = 1;
 //    private final int FRAGMENT2 = 2;
 //    private final int FRAGMENT3 = 3;
@@ -119,11 +125,6 @@ public class ReservationActivity extends AppCompatActivity {
 
                 thirdSeatNum = findViewById(R.id.thirdSeatNum);
                 thirdSeatNum.setText(nowCnt);
-
-                list_3floor.setOnClickListener(v -> {
-                    intent = new Intent(getApplicationContext(), ReserveDialog.class);
-                    startActivity(intent);
-                });
             }
 
             @Override
@@ -141,6 +142,11 @@ public class ReservationActivity extends AppCompatActivity {
 //        databaseReference.updateChildren(childUpdates);
 //    }
 }
+
+
+
+
+
 
 
 
